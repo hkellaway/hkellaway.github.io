@@ -1,8 +1,7 @@
 - name: Email
   is_displayed: true
   url_base: mailto&#58;
-  handle: hkellaway@users.noreply.github.com
-  custom_image_url: 
+  handle: hello@harlankellaway.com
 
 - name: Twitter
   is_displayed: true
@@ -15,9 +14,9 @@
   handle: hkellaway
 
 - name: LinkedIn
-  is_displayed: false
+  is_displayed: trie
   url_base: http://linkedin.com/in/
-  handle: 
+  handle: hkellaway
 
 - name: Blog
   is_displayed: true
