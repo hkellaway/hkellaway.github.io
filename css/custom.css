@@ -4,6 +4,10 @@
 /*
 /*****************************************************************************/
 
+.missingpage {
+  margin-left: 50px;
+}
+
 .headline > .container > h3 {
   background: #ffffff;
   background: rgba(255, 255, 255, 0.9);
@@ -19,6 +23,11 @@
 
 .post .date {
   font-style: italic;
+}
+
+.post .post-print {
+  float: right;
+  margin-right: 120px;
 }
 
 .posts {

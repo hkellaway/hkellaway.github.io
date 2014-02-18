@@ -14,21 +14,16 @@
   handle: hkellaway
 
 - name: LinkedIn
-  is_displayed: trie
+  is_displayed: true
   url_base: http://linkedin.com/in/
   handle: hkellaway
+
+- name: RSS
+  is_displayed: true
+  url_base: /feed.blog.xml
+  handle: 
 
 - name: Blog
   is_displayed: true
   url_base: /blog/
-  handle: #
-
-- name: Tumblr
-  is_displayed: false
-  urlbase: http://demo.tumblr.com/
-  handle: #
-
-- name: RSS
-  is_displayed: false
-  urlbase: 
-  handle: 
+  handle:

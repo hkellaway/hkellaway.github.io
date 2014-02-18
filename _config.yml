@@ -1,5 +1,14 @@
+# Custom settings
+
+my_site_googleanalytics: hkellaway.github.io
+my_code_googleanalytics: UA-48126443-1
+
+my_label_warning: Site under construction! Maybe you should try <strong><a class="alert-link" href="http://harlankellaway.com" target="_blank">harlankellaway.com</a></strong>?
+is_warning_displayed: true
+
 # MODIFY these settings
 
+url: http://hkellaway.github.io
 name: Harlan Kellaway
 tagline: is a developer based in Brooklyn.
 blog_name: Harlan Kellaway
@@ -13,12 +22,8 @@ my_license: Licensed under Apache License v2.0
 my_license_url: http://apache.org/licenses/LICENSE-2.0
 my_template_name: Original Theme  by Start Bootstrap
 my_template_url: http://startbootstrap.com/
-
-my_label_toggle_navigation: Toggle Navigation
-my_label_findoutmore: Blog
-
-my_label_socialmedia: Connect&#58;
-my_delimiter_socialmedia: //
+my_headerimage_name: Header Image by The Pattern Library
+my_hreaderimage_url: http://thepatternlibrary.com
 
 is_socialmedia_widget_displayed: true
 is_github_ribbon_displayed: true
@@ -27,6 +32,18 @@ is_site_author_displayed: true
 is_copyright_displayed: false
 is_headerimagecred_displayed: true
 is_blog_pagination_on: true
+is_blog_printbutton_displayed: true
+is_subscribe_displayed: true
+
+my_label_toggle_navigation: Toggle Navigation
+my_label_findoutmore: Blog
+my_label_postshare: Share&#58;&nbsp;
+my_label_subscribebutton: Subscribe <i class="icon icon-envelope"></i>
+my_label_socialmedia: Connect&#58;
+
+my_delimiter_socialmedia: //
+my_label_blog_post_list: Blog Posts
+my_search_engine_id_google: 001082080759982814974:1e6h4bapzos
  
 github_ribbon_color: red # can be blue, orange, gray, green, red
 github_theme_url: https://github.com/hkellaway/Simple-Jekyll-Bootstrap-Theme

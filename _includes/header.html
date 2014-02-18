@@ -9,6 +9,8 @@
 
     {% endif %}
 
+    <link rel="canonical" href="{{ site.domain }}{{ page.url | replace:'index.html','' }}" />
+
     <title>{{ page.title }}</title>
 
      <!-- Load Bootstrap and FontAwesome CDN'ed from bootstrapcdn.com -->
@@ -63,10 +65,9 @@
                      {% assign stripped_spaces =  section.link_label | remove: ' ' %}
                      {% assign link_anchor = stripped_spaces | downcase  %}
 
-                     <li><a href="#{{ link_anchor }}">{{ section.link_label }}</a></li>
+                     <li><a href="/#{{ link_anchor }}">{{ section.link_label }}</a></li>
 
                    {% endfor %}
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

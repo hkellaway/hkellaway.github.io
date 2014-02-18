@@ -14,9 +14,50 @@ categories: blog
 
 <h2>{{ page.title }}</h2>
 
-<p  class="date">{{ page.date | date_to_string }}</p>
+<div class="postheader">
+
+  <div  class="date">{{ page.date | date_to_string }}
+  </div>
+
+    {% if site.is_blog_printbutton_displayed %}
+
+      <div class="post-print">{% include /widgets/printbutton.html  %}
+      </div>
+
+    {% endif %}
+
+</div>
 
   {{ content }}
+
+  <br />
+
+<div class="postshare">
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          {{ site.my_label_postshare }}
+        </td>
+        <td>
+          {% include /widgets/addthis.html %}
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          {% include /widgets/printbutton.html %}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+  <br />
+
+  {% include /widgets/disqus.html %}
 
 </div>
 

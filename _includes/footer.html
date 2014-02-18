@@ -8,6 +8,17 @@
 
    {% endif %}
 
+   <div style="float:right" class="subscribe">
+
+     {% include /widgets/subscribe.html %}
+
+     <br />
+     <br />
+
+     {% include /widgets/search.html %}
+
+   </div>
+
    <div class="backtotop">
  
      <a href="{{ page.id }}#">Back to Top</a> &uarr;
@@ -34,9 +45,13 @@
 
      <a href="{{ site.my_template_url }}" target="_blank">{{ site.my_template_name }} </a>
 
-     <br />
+     {% if site.is_headerimagecred_displayed %}
 
-     <a href="{{ site.my_headerimage_url }}" target="_blank">{{ site.my_headerimage_name }}</a>
+       <br />
+
+       <a href="{{ site.my_headerimage_url }}" target="_blank">{{ site.my_headerimage_name }}</a>
+
+     {% endif %}
 
      <br />
 
@@ -51,5 +66,7 @@
      {% endif %}
 
    </div>
+
+   {% include /widgets/google_analytics.html %}
 
 </div>
