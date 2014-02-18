@@ -20,7 +20,7 @@
 
 - name: RSS
   is_displayed: true
-  url_base: /feed.blog.xml
+  url_base: http://feeds.feedburner.com/HKellaway-Blog
   handle: 
 
 - name: Blog

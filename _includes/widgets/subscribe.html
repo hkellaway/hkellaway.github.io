@@ -1,3 +1,9 @@
-      <form class="navbar-form navbar-left" role="subscribe">
-        <button type="submit" class="btn btn-success">{{ site.my_label_subscribebutton }}</button>
-      </form>
+<form class="navbar-form navbar-left" role="subscribe" onSubmit="goToSubscriptionPage()">
+  <button type="submit" class="btn btn-success">{{ site.my_label_subscribebutton }}</button>
+</form>
+
+<script type="text/javascript">
+  function goToSubscriptionPage() {    
+    window.location = "{{ site.my_email_subscription_url }}"
+  }
+</script>
