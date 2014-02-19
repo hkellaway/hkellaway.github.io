@@ -6,7 +6,7 @@ my_code_googleanalytics: UA-48126443-1
 my_label_warning: Site under construction! Maybe you should try <strong><a class="alert-link" href="http://harlankellaway.com" target="_blank">harlankellaway.com</a></strong>?
 is_warning_displayed: true
 
-my_email_subscription_url: http://feedburner.google.com/fb/a/mailverify?uri=HKellaway-Blog&amp;loc=en_US
+my_email_subscription_url: http://feedburner.google.com/fb/a/mailverify?uri=HKellaway-Blog
 
 # MODIFY these settings
 
