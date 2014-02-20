@@ -2,3 +2,4 @@ _site
 _backups
 *.save
 wordpress.xml
+feed.dhpraxis.xml
