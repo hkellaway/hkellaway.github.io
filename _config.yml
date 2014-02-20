@@ -22,7 +22,7 @@ my_site_author_name: Harlan Kellaway
 my_site_author_url: http://hkellaway.github.io
 my_license: Licensed under Apache License v2.0
 my_license_url: http://apache.org/licenses/LICENSE-2.0
-my_template_name: Original Theme  by Start Bootstrap
+my_template_name: Based on a  Theme by Start Bootstrap
 my_template_url: http://startbootstrap.com/
 my_headerimage_name: Header Image by The Pattern Library
 my_hreaderimage_url: http://thepatternlibrary.com
@@ -39,7 +39,7 @@ is_subscribe_displayed: true
 
 my_label_toggle_navigation: Toggle Navigation
 my_label_findoutmore: Blog
-my_label_postshare: Share&#58;&nbsp;
+my_label_postshare: Spread the words&#58;&nbsp;
 my_label_subscribebutton: Subscribe <i class="icon icon-envelope"></i>
 my_label_socialmedia: Connect&#58;
 
