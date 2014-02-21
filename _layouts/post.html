@@ -20,13 +20,11 @@ categories: blog
 
 <div class="postheader">
 
-  <div  class="date">{{ page.date | date_to_string }}
-  </div>
+  <span  class="date">{{ page.date | date_to_string }}</span>
 
     {% if site.is_blog_printbutton_displayed %}
 
-      <div class="post-print">{% include /widgets/printbutton.html  %}
-      </div>
+      <span class="postprint">{% include /widgets/printbutton.html  %}</span>
 
     {% endif %}
 
