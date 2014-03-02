@@ -2,15 +2,17 @@
 
    <hr>
 
-   {% if site.is_socialmedia_widget_displayed %}
+  <div class="socialmedia">
 
-     {% include /widgets/socialmedia.html %}
+    {% if site.is_socialmedia_widget_displayed %}
 
-   {% endif %}
+      {% include /widgets/socialmedia.html %}
 
-   <div style="float:right; overflow: hidden; margin-right: 20px;" class="subscribe">
+    {% endif %}
 
-     {% include /widgets/subscribe.html %}
+    <br />
+
+    {% include /widgets/subscribe.html %}
 
    </div>
 

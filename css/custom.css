@@ -4,10 +4,6 @@
 /*
 /*****************************************************************************/
 
-.gsc-search-button {
-  margin-top:100px;
-}
-
 .missingpage {
   margin-left: 50px;
 }
@@ -71,8 +67,10 @@
 }
 
 .footer .socialmedia {
-  text-align: right;
+  float: right;
+  overflow: hidden;
   text-decoration: none;
+  margin-right:50px;
 }
 
 .footer .socialmedia a {
