@@ -68,7 +68,3 @@ These are all tradeoffs between two options that have their own virtues – and 
 Personally, I’m moving from WordPress to Jekyll as I feel a greater need to control more aspects of my own (very simple) site. You can check out my current WordPress site at [http://harlankellaway.wordpress.com] (http://harlankellaway.wordpress.com/) and a site I made using Jekyll at [http://hkellaway.github.io] (http://hkellaway.github.io)
 
 Happy coding!
-
-<br />
-
-<span style="font-size:85%;">This blog is licensed under [http://creativecommons.org/licenses/by-nc-sa/3.0/] (Attribution-Noncommercial-Share Alike 3.0 Unported) license.</span>

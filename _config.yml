@@ -14,7 +14,7 @@ url: http://hkellaway.github.io
 name: Harlan Kellaway
 tagline: is a developer based in Brooklyn.
 blog_name: Harlan Kellaway
-blog_tagline: has a blog.
+blog_tagline: writes about tech and gender.
 timezone: America/New_York
 
 my_email: hello@harlankellaway.com
@@ -22,6 +22,8 @@ my_site_author_name: Harlan Kellaway
 my_site_author_url: http://hkellaway.github.io
 my_license: Licensed under Apache License v2.0
 my_license_url: http://apache.org/licenses/LICENSE-2.0
+my_blog_license: Attribution-Noncommercial-Share Alike 3.0 Unported
+my_blog_license_url: http://creativecommons.org/licenses/by-nc-sa/3.0/
 my_template_name: Based on a  Theme by Start Bootstrap
 my_template_url: http://startbootstrap.com/
 my_headerimage_name: Header Image by The Pattern Library

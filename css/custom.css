@@ -13,6 +13,10 @@
   background: rgba(255, 255, 255, 0.9);
 }
 
+.archive {
+  margin-left: 50px;
+}
+
 .blog {
   margin-left: 50px;
   margin-right: 50px;
@@ -39,6 +43,10 @@
 .postprint {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.post .attribution {
+  font-size:90%;
 }
 
 .posts {
