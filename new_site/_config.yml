@@ -1,0 +1,49 @@
+name: Harlan Kellaway
+markdown: redcarpet
+pygments: true
+
+# Coffee & Cream Settings
+
+cc_site_title: Welcome | Harlan Kellaway
+cc_my_name: Harlan Kellaway
+cc_my_job: Developer
+cc_my_about: I work in application development, often with non-profits. I also study Digital Humanities + Gender Studies at the CUNY Graduate Center. What I hope to do most is use my background in tech and my passion for gender studies to promote social justice for the gender non-conforming community.<br><br>I write <a href="http://harlankellaway.com/category/blog/" target="_blank">here</a> about tech and gender.
+
+cc_my_email: hello@harlankellaway.com
+cc_my_twitter_handle: DigiHumanatee
+cc_my_github_handle: hkellaway
+cc_my_linkedin_handle: hkellaway
+
+cc_glyphicon_home: home
+
+cc_section_title_1: About Me
+cc_anchor_1: about
+cc_glyphicon_1: user
+
+cc_section_title_2: Education
+cc_anchor_2: education
+cc_glyphicon_2: certificate
+
+cc_section_title_3: Employment
+cc_anchor_3: employment
+cc_glyphicon_3: share_alt
+
+cc_section_title_4: Projects
+cc_anchor_4: services
+cc_glyphicon_4: ok_2
+
+cc_section_title_5: Skills
+cc_anchor_5: skills
+cc_glyphicon_5: cogwheels
+
+cc_section_title_6: Social Media
+cc_anchor_6: social
+cc_glyphicon_6: heart
+
+cc_section_title_7: Contact Me
+cc_anchor_7: contact
+cc_glyphicon_7: envelope
+
+cc_section_title_8: Download my Resum&#233;
+cc_anchor_8: download
+cc_glyphicon_8: paperclip
