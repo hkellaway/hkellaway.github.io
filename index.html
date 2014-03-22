@@ -42,7 +42,10 @@ title: Welcome | Harlan Kellaway
 	<!-- Google Fonts
 	================================================== -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic' rel='stylesheet' type='text/css'>
-	
+
+	<!-- FontAwesome Icons
+	=================================================  -->	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 </head>
 
@@ -253,7 +256,7 @@ title: Welcome | Harlan Kellaway
 						<div class="col dim1third">
 						
 							<img src="./images/iconserv5.png" alt="TransH4CK image" >
-							<h3>Trans*H4ck</h3>
+							<h3>Trans*H4CK</h3>
 							<p>Organizer</p>
                                                         <div class="more">
                                                                 <a class="btn" href="http://transhack.org/" target="_blank">Website</a>
@@ -353,7 +356,7 @@ title: Welcome | Harlan Kellaway
 	
 	<div id="{{ site.cc_anchor_7 }}" class="coffee-container parallax" data-speed="24" data-offsetY="-150">
 		
-		<div class="icon-container"><div><span class="glyphicons {{ site.cc_glyphicon_7 }}}"><i></i></span></div></div>
+		<div class="icon-container"><div><span class="glyphicons {{ site.cc_glyphicon_7 }}"><i></i></span></div></div>
 		
 		<div class="container wrap">
 		
@@ -363,18 +366,20 @@ title: Welcome | Harlan Kellaway
 				
 					<h2>{{ site.cc_section_title_7 }}</h2>
 
-					<a href="mailto:hello@harlankellaway.com?subject=hello from your contact page!">hello [at] harlankellaway [dot] com</a>
+					{% assign email_0 = site.cc_my_email | replace: '@', ' [at] ' %}
+					{% assign email = email_0 | replace: '.', ' [dot] ' %}
+
+					<p><a href="mailto:{{ hello@harlankellawa.com }}?subject=hello from your contact page!">{{ email }}</a></p>
 					
 					{% if site.is_available_for_work %}
 						{% assign work_status =  'am' %}
 					{% else %}
 						{% assign work_status = 'am not' %}
 					{% endif %}
-
-
+					
                                         <div class="more">
-						<p>I am based in <span class="btn transparent">{{ site.cc_my_location }}</span></p>
-                                                <p>I currently <span class="btn transparent">{{ work_status }}</span> available for work.</p>
+						<p>I am based in <span class="btn">{{ site.cc_my_location }}</span></p>
+                                                <p>I currently <span class="btn">{{ work_status }} available</span> for work.</p>
                                         </div>
 					
 				</div><!-- /.col -->
