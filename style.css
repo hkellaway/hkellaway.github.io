@@ -230,12 +230,10 @@ display: block;
 border: 5px solid #fff; overflow: hidden;
 }
 #ccimage img { position: relative !important; display: inline !important;}
-#hello {top: 20px; right: 53%;}
-#ccname {top: 40px; right: 53%;}
-#iam {top: 120px; right: 53%;}
-#ccfunction {top: 140px; right: 53%;}
-#basedin {top: 220px; right: 53%;}
-#cclocation {top: 240px; right: 53%;}
+#hello {top: 30px; right: 53%;}
+#ccname {top: 50px; right: 53%;}
+#iam {top: 130px; right: 53%;}
+#ccfunction {top: 150px; right: 53%;}
 
 #home p {padding-bottom: 0; font-size: 16px;}
 #home h1 {margin-bottom: 15px;}

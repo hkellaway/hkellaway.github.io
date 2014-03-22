@@ -2,6 +2,8 @@ name: Harlan Kellaway
 markdown: redcarpet
 pygments: true
 
+is_available_for_work: false
+
 # Coffee & Cream Settings
 
 cc_site_title: Welcome | Harlan Kellaway

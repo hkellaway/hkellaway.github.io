@@ -87,8 +87,6 @@ title: Welcome | Harlan Kellaway
 					<h1 id="ccname" class=" ">{{ site.cc_my_name }}</h1>
 					<p id="iam" class=" ">I am a</p>
 					<h2 id="ccfunction" class=" ">{{ site.cc_my_job }}</h2>
-                                        <p id="basedin" class=" ">based in</p>
-                                        <h2 id="cclocation" class=" ">{{ site.cc_my_location }}</h2>
 					
 				</div><!-- /.col -->
 				
@@ -338,9 +336,9 @@ title: Welcome | Harlan Kellaway
 					<h2>{{ site.cc_section_title_6 }}</h2>
 										
 					<div class="more">
-					<a href="http://twitter.com/{{ site.cc_my_twitter_handle }}" target="_blank" class="btn transparent"><span class="glyphicons twitter"><i></i></span>Twitter</a> 
-					<a href="http://github.com/{{ site.cc_my_github_handle }}" target="_blank" class="btn transparent"><span class="glyphicons github"><i></i></span>GitHub</a> 
-					<a href="http://linkedin.com/in/{{ site.cc_my_linkedin_handle }}" target="_blank"  class="btn transparent"><span class="glyphicons linked_in"><i></i></span>LinkedIn</a>
+						<a href="http://twitter.com/{{ site.cc_my_twitter_handle }}" target="_blank" class="btn transparent"><span class="glyphicons twitter"><i></i></span>Twitter</a> 
+						<a href="http://github.com/{{ site.cc_my_github_handle }}" target="_blank" class="btn transparent"><span class="glyphicons github"><i></i></span>GitHub</a> 
+						<a href="http://linkedin.com/in/{{ site.cc_my_linkedin_handle }}" target="_blank"  class="btn transparent"><span class="glyphicons linked_in"><i></i></span>LinkedIn</a>
 					</div>
 
 					
@@ -366,6 +364,18 @@ title: Welcome | Harlan Kellaway
 					<h2>{{ site.cc_section_title_7 }}</h2>
 
 					<a href="mailto:hello@harlankellaway.com?subject=hello from your contact page!">hello [at] harlankellaway [dot] com</a>
+					
+					{% if site.is_available_for_work %}
+						{% assign work_status =  'am' %}
+					{% else %}
+						{% assign work_status = 'am not' %}
+					{% endif %}
+
+
+                                        <div class="more">
+						<p>I am based in <span class="btn transparent">{{ site.cc_my_location }}</span></p>
+                                                <p>I currently <span class="btn transparent">{{ work_status }}</span> available for work.</p>
+                                        </div>
 					
 				</div><!-- /.col -->
 				
