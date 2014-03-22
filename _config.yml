@@ -1,77 +1,49 @@
-# Custom settings
-
-my_site_googleanalytics: hkellaway.github.io
-my_code_googleanalytics: UA-48126443-1
-
-my_label_warning: Site under construction! Maybe you should try <strong><a class="alert-link" href="http://harlankellaway.com" target="_blank">harlankellaway.com</a></strong>?
-is_warning_displayed: true
-
-my_email_subscription_url: http://feedburner.google.com/fb/a/mailverify?uri=HarlanKellaway-Blog
-
-# MODIFY these settings
-
-url: http://hkellaway.github.io
 name: Harlan Kellaway
-tagline: is a developer based in Brooklyn.
-blog_name: Harlan Kellaway
-blog_tagline: writes about tech and gender.
-timezone: America/New_York
-
-my_email: hello@harlankellaway.com
-my_site_author_name: Harlan Kellaway
-my_site_author_url: http://hkellaway.github.io
-my_license: Licensed under Apache License v2.0
-my_license_url: http://apache.org/licenses/LICENSE-2.0
-my_blog_license: Attribution-Noncommercial-Share Alike 3.0 Unported
-my_blog_license_url: http://creativecommons.org/licenses/by-nc-sa/3.0/
-my_template_name: Based on a  Theme by Start Bootstrap
-my_template_url: http://startbootstrap.com/
-my_headerimage_name: Header Image by The Pattern Library
-my_hreaderimage_url: http://thepatternlibrary.com
-
-is_socialmedia_widget_displayed: true
-is_github_ribbon_displayed: true
-use_default_socialmedia_icons: true
-is_site_author_displayed: true
-is_copyright_displayed: false
-is_headerimagecred_displayed: true
-is_blog_pagination_on: true
-is_blog_printbutton_displayed: true
-is_subscribe_displayed: true
-
-my_label_toggle_navigation: Toggle Navigation
-my_label_findoutmore: Blog
-my_label_postshare: Spread the words&#58;&nbsp;
-my_label_subscribebutton: Subscribe <i class="icon icon-envelope"></i>
-my_label_socialmedia: Connect&#58;
-
-my_delimiter_socialmedia: //
-my_label_blog_post_list: Blog Posts
-my_search_engine_id_google: 001082080759982814974:1e6h4bapzos
- 
-github_ribbon_color: red # can be blue, orange, gray, green, red
-github_theme_url: https://github.com/hkellaway/Simple-Jekyll-Bootstrap-Theme
-
-
-# DO NOT modify these without understanding why - it may have unintended consequences!
-
 markdown: redcarpet
 pygments: true
 
-permalink: pretty
-paginate: 5
-paginate_path: "blog/page:num"
+# Coffee & Cream Settings
 
-my_blog_subpath: /blog/
-my_images_subpath: /images/
-my_images_filetype: .png
-my_socialmedia_images_filename_stub: logo_
+cc_site_title: Welcome | Harlan Kellaway
+cc_my_name: Harlan Kellaway
+cc_my_job: Developer
+cc_my_about: I work in application development, often with non-profits. I also study Digital Humanities + Gender Studies at the CUNY Graduate Center. What I hope to do most is use my background in tech and my passion for gender studies to promote social justice for the gender non-conforming community.<br><br>I write <a href="http://harlankellaway.com/category/blog/" target="_blank">here</a> about tech and gender.
 
-blog_required_categories: blog
+cc_my_email: hello@harlankellaway.com
+cc_my_twitter_handle: DigiHumanatee
+cc_my_github_handle: hkellaway
+cc_my_linkedin_handle: hkellaway
 
-jekyll_url: http://jekyllrb.com/
-github_ribbon_image_stub: github_ribbon_
-bootstrap_noicons_cdn_url: //netdna.boostrapcdn.com/twitter-bootstrap/2.3.1/css/boostrap-combined.no-icons.min.css/
-bootstrap_fontawesome_icons_cdn_url: //netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
-icons_url: http://fontawesome.io/
-icons_label: Icons by FontAwesome
+cc_glyphicon_home: home
+
+cc_section_title_1: About Me
+cc_anchor_1: about
+cc_glyphicon_1: user
+
+cc_section_title_2: Education
+cc_anchor_2: education
+cc_glyphicon_2: certificate
+
+cc_section_title_3: Employment
+cc_anchor_3: employment
+cc_glyphicon_3: share_alt
+
+cc_section_title_4: Projects
+cc_anchor_4: services
+cc_glyphicon_4: ok_2
+
+cc_section_title_5: Skills
+cc_anchor_5: skills
+cc_glyphicon_5: cogwheels
+
+cc_section_title_6: Social Media
+cc_anchor_6: social
+cc_glyphicon_6: heart
+
+cc_section_title_7: Contact Me
+cc_anchor_7: contact
+cc_glyphicon_7: envelope
+
+cc_section_title_8: Download my Resum&#233;
+cc_anchor_8: download
+cc_glyphicon_8: paperclip
