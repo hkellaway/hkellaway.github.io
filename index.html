@@ -378,7 +378,7 @@ title: Welcome | Harlan Kellaway
 					{% assign email_0 = site.cc_my_email | replace: '@', ' [at] ' %}
 					{% assign email = email_0 | replace: '.', ' [dot] ' %}
 
-					<p><a href="mailto:{{ hello@harlankellawa.com }}?subject=hello from your contact page!">{{ email }}</a></p>
+					<p><a href="mailto:{{ site.cc_my_email }}?subject=hello from your contact page!">{{ email }}</a></p>
 					
 					{% if site.is_available_for_work %}
 						{% assign work_status =  'am' %}
