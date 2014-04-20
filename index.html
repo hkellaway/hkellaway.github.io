@@ -33,11 +33,11 @@ title: Welcome | Harlan Kellaway
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" id="o-responsive-css" href="./css/o-responsive.css" type="text/css" media="all">
-	<link rel="stylesheet" id="themestyle-css" href="./style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="themestyle-css" href="./css/style.css" type="text/css" media="all">
 	<link rel="stylesheet"  id="prettyPhoto-css" href="./css/prettyPhoto.css" media="screen">
 	<link rel="stylesheet" id="photoswipe-css" href="./css/photoswipe.css" type="text/css" media="all">
 	<link rel="stylesheet" id="glyphicons-css" href="./css/glyphicons.css" type="text/css" media="all">
-
+        <link rel="stylesheet" href="./css/custom.css" type="text/css" media="all">
 	
 	<!-- Google Fonts
 	================================================== -->
@@ -113,7 +113,8 @@ title: Welcome | Harlan Kellaway
 					<h2>{{ site.cc_section_title_1 }}</h2>
 					
 					<p class="intro big">{{ site.cc_my_about }}</p>
-
+                                        
+                                        <p class="intro big">{% include gittip.html %}</p>
 					
 				</div><!-- /.col -->
 				
@@ -351,6 +352,7 @@ title: Welcome | Harlan Kellaway
 						<a href="http://twitter.com/{{ site.cc_my_twitter_handle }}" target="_blank" class="btn transparent"><span class="glyphicons twitter"><i></i></span>Twitter</a> 
 						<a href="http://github.com/{{ site.cc_my_github_handle }}" target="_blank" class="btn transparent"><span class="glyphicons github"><i></i></span>GitHub</a> 
 						<a href="http://linkedin.com/in/{{ site.cc_my_linkedin_handle }}" target="_blank"  class="btn transparent"><span class="glyphicons linked_in"><i></i></span>LinkedIn</a>
+					<a href="http://gittip.com/{{ site.cc_my_gittip_handle }}" target="_blank"  class="btn transparent"><span class="glyphicons coins"><i></i></span>Gittip</a>
 					</div>
 
 					
