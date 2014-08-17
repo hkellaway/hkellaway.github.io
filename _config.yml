@@ -2,7 +2,7 @@ name: Harlan Kellaway
 markdown: redcarpet
 pygments: true
 
-is_available_for_work: true
+is_available_for_work: false
 
 # Coffee & Cream Settings
 
