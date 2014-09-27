@@ -1,0 +1,53 @@
+---
+layout: post
+title: 'Chromebooks for Development: Why and How'
+date: 2014-02-09 11:00:20.000000000 -08:00
+categories:
+- log
+tags:
+- advice
+- beginners
+- chromebooks
+- coding
+- tech
+status: publish
+type: post
+published: true
+---
+<p>Chromebooks are wonderful for certain things -- they're fast, they're light, their interface is seamlessly integrated with Google products that many already rely on. What sets Chromebooks apart from Windows PCs, Apple Macs, or those systems running Linux is a novel type of operating system (<a href="http://mashable.com/2009/11/19/chrome-os-differences/" target="_blank">Chrome OS</a>) born of increasing computer experience dominated by app-oriented mobile devices and cloud-based web applications.</p>
+<p>Chromebooks lack the ability to download applications that run independent of the Internet (for example, Excel or ITunes). This may seem like an inconvenience -- but, a system like the Chromebook does have a place in a user population where many are accustomed to the restriction of using apps on their mobile devices, are already using many Google products (who wants to pay for Microsoft Office when they can use Google Docs??), and can survive without downloading client applications. Can you describe yourself like I can describe many people I know? <em>I mostly use email, Google Docs, social media sites (Twitter, Tumblr), web-based music players (Pandora, Spotify), and web-based video players (Netflix, Hulu).</em></p>
+<p>But if you are someone who wants or needs to download programs -- something inevitable for developers -- the Chromebook in its natural state just doesn't suffice. But, there is hope!</p>
+<p><!--more Read On--></p>
+<p>&nbsp;</p>
+<h1>Intro to the Chromebook</h1>
+<p>Chromebook users can only "download" "programs" that are available in the <a href="https://chrome.google.com/webstore/category/apps" target="_blank">Chrome Web Store</a>. It looks a lot like a smartphone's app store, right? The reason I use air-quotes is because this isn't <em>downloading</em> in the traditional sense and they aren't <em>programs</em> in the traditional sense -- just about every app from the Chrome Web Store is tied to the Chrome web browser. Many are simply browser extensions. Many are simply links to websites! </p>
+<p>What Chrome OS does is give users the feel of using a traditional operating system interface -- there's a toolbar, there's icons to click, files can be saved in folders, etc. -- but most "programs" are links to web-based applications or Chrome browser extensions. Chrome OS users are not allowed to download stand-alone applications that aren't explicitly provided by Google. </p>
+<p>An example: I cannot download the Spotify application, but downloading the Spotify app from the Chrome Web Store gives me an icon in my <em>Apps menu</em> (akin to the <em>Start menu</em> on Windows machines) that, when clicked, simply opens a tab in the Chrome browser to the Spotify website. Same goes for Google Docs -- much like I might click a Microsoft Office Excel icon on the toolbar of a Windows or Mac machine, clicking the Google Sheets icon on a Chromebook opens a Google Docs spreadsheet in the Chrome browser.</p>
+<p>&nbsp;</p>
+<h2>Why would you buy a Chromebook?</h2>
+<ul>
+<li>
+Chromebooks are cheap. </p>
+<p>The most affordable Chromebooks currently cost about half the price of the most affordable PC. And Macs are plain prohibitively expensive for a lot of folks and most don't need the creative tool suites that Macs are known for specializing in.
+</li>
+<li>
+Chromebooks are portable -- in a physical and digital sense.</p>
+<p>Chromebooks lack much of the hardware of other machines -- no CD/DVD drive and <a href="http://techland.time.com/2013/11/15/acer-ditches-the-hard-disk-with-new-200-chromebook-laptop/" target="_blank">no big hard disk drive</a>. There's minimal physical storage on the machine as most information is saved to Google Drive, Google's cloud storage system.</p>
+<p>Cheomebooks are portable in the digital sense in that you can sign into any Chromebook and have the exact same interface; your preferences are associated with your Gmail account, not with a particular machine. So, if I set my personal Chromebook to have the Netflix icon and the Calculator icon and the Gmail icon on the toolbar then log into a friends' -- I won't see whatever icons they have on their toolbar or the default icons, I'll see icons in the exact same order as I had set-up on my personal machine! This is akin to losing a cellphone, getting a new device, and it automatically syncing all of your Contacts. You don't have to recreate your personal profile on every machine. Wildly convenient.
+</li>
+<li>
+Chromebooks do have what many people already use (email, document editor, music, movies).
+</li>
+</ul>
+<p>While it's been an adjustment to not be able to download any program, any time I want, I'm still drawn to the Chromebook. It's comforting to know that if my machine exploded tomorrow, I could afford to get a new Chromebook and pick up right where I left off fairly effortlessly. </p>
+<p>I'm not saying that doesn't have its downsides -- there's been <a href="http://www.motherjones.com/politics/2006/10/google-evil" target="_blank">debates</a> <a href="http://www.nybooks.com/articles/archives/2011/aug/18/how-google-dominates-us/" target="_blank">for</a> <a href="http://www.wired.com/business/2012/06/opinion-google-is-evil/" target="_blank">quite</a> <a href="http://www.businessinsider.com/google-being-evil-2012-5" target="_blank">a</a> <a href="http://gizmodo.com/5878987/its-official-google-is-evil-now" target="_blank">while</a> <a href="http://www.theatlantic.com/technology/archive/2013/10/what-is-evil-to-google/280573/" target="_blank">now</a> as to whether Google ethically uses the vast amount of information it gathers and, if so, whether it may not one day. It's important to be aware of privacy concerns related to using Google products and decide how you'll mitigate that -- perhaps by not even getting a Chromebook.</p>
+<p>&nbsp;</p>
+<h2>Development on a Chromebook</h2>
+<p>For a developer using a Chromebook, it can be a hard pill to swallow: whatever coding practices you may have had on your Windows PC or your Apple Macintosh or your Linux box -- you can forget about them on the out-of-the-box Chromebook. No Eclipse, no MySQL Workbench, no Emacs, no Git! Impossible, you say. Yes - impossible without some hacking.</p>
+<p>It should be noted that there are some apps that give you text editors and FTP access to web server files (e.g. <a href="https://c9.io/" target="_blank">Cloud 9 IDE</a>) -- but for a more robust environment, getting Linux to run on your Chromebook is your best bet, given Chrome OS has a Linux foundation.</p>
+<p>Getting Linux to run side-by-side with Chrome OS is made possible by an open-source project called <a href="https://github.com/dnschneid/crouton/" target="_blank">Crouton</a>. The Linux environment that Crouton helps you install can be switched back and forth to-from your Chrome OS environment. Everyday tasks can be done in Chrome OS; development can be done in the Linux.</p>
+<p>There are a ton of tutorials out there on how to get Crouton up and running on your Chromebook, so I won't repeat it -- rather, I'll point you to my favorite personal tutorial:</p>
+<p><a href="http://craigerrington.com/blog/crouton-script-from-sd-card/" target="_blank">http://craigerrington.com/blog/crouton-script-from-sd-card/</a></p>
+<p>This tutorial mentions placing Crouton on an SD Card -- there is an advantage here in that your Crouton environment will then be portable and will not crash if your Chromebook crashes. That being said, in my Crouton experiments, the information on my SD Card did get wiped out periodically, and I was never sure why. Take plenty of backups and if you do development work that can be public, you can back your work up on GitHub!</p>
+<p>After Crouton is installed and you're comfortably able to switch between the Chrome OS and Linux environments (and are comfortable using a Linux OS), you can use your new Linux environment to download preferred development tools. Before you do anything major (and during and after), make sure to take backups!</p>
+<p>Happy coding.</p>

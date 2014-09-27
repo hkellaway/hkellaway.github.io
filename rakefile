@@ -11,6 +11,16 @@ task :serve do
   system "open http://localhost:4000"
 end
 
+desc "Commits changes."
+# Usage: rake commit "Commit message."
+task :commit do
+  message = ARGV.last
+  task message.to_sym do ; end
+  system "git add --all"
+  system "git commit -am '#{message}'"
+  puts "Git commit attempt complete."
+end
+
 desc "Updates GitHub."
 # Usage: rake ship "Commit message."
 task :ship do

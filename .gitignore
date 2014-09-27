@@ -1,7 +1,4 @@
 _site
 _backups
-*.save
+theme/
 wordpress.xml
-theme.zip
-new_site
-orig_site_files

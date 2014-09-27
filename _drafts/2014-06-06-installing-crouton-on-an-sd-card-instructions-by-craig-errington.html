@@ -1,0 +1,98 @@
+---
+layout: post
+title: Installing Crouton on an SD Card Instructions by Craig Errington
+date: 2014-06-06 18:54:07.000000000 -07:00
+categories:
+- Blog
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  geo_public: '0'
+author: 
+---
+<p>crouton script, from SD card</p>
+<p>Updated some of the instructions below</p>
+<p>So, I’ve just been shown how to install the XFCE chroot environment onto an SD card.. (I will include instructions for internal and external). These instructions supercede all previous ones, as a lot of fixes are incorperated by the Crouton developer, and are no longer needed.</p>
+<p>So now, you can run ChromeOS, a full Ubuntu with an XFCE desktop, literally at the same time, switch between them with a key stroke, and not use up any of the internal storage of your Chromebook…</p>
+<p>These instructions are written for the ARM Chromebook – they will work for other devices BUT be very careful and figure out the name of your SD card using “sudo fdisk -l” before following anything below – anywhere you see “/dev/mmcblk1″ you should substitute for your SD card name.</p>
+<p>First up, if you’re like me, you’ll want to remove your original chroot, and start again with the SD.</p>
+<p>So first command:</p>
+<p>1<br />
+sudo delete-chroot precise<br />
+Making an EXT4 Partition on your SD Card</p>
+<p>(ignore this whole section it you want to install internally, I’ll give you a shout when it’s time to join back in!)</p>
+<p>This assumes you want to use the whole SD. If you have another computer, instead of using your Chromebook – this can be replaced with “insert SD in computer, make EXT4 partition with gparted”…But this is written with the assumption you’ll be using an ARM chromebook for *all* steps.</p>
+<p>Get into a shell</p>
+<p>This is destructive to your SD card, kiss its content goodbye (or back it up)</p>
+<p>First, we’ll just check the name of our SD card:</p>
+<p>1<br />
+sudo fdisk -l<br />
+On the ARM chromebook it’s /dev/mmcblk1</p>
+<p>Next wee’ll unmount any partitions mounted on the SD</p>
+<p>1<br />
+sudo umount /dev/mmcblk1*<br />
+Next we’re going to create a new partition table on the SD card.</p>
+<p>1<br />
+sudo parted /dev/mmcblk1<br />
+This will take you into the ‘parted’ application, where we can create the new table.. Execute the following line and then click enter</p>
+<p>1<br />
+mktable msdos<br />
+Type “yes” when asked and hit return. Then type “quit” and click enter.</p>
+<p>Reboot the chromebook to clear the mount points and stuff… (Do it, seriously)</p>
+<p>Get back into a shell</p>
+<p>Now we’re going to create a linux partition onto the SD card</p>
+<p>1<br />
+sudo fdisk /dev/mmcblk1<br />
+This will take you into the ‘fdisk’ application.</p>
+<p>Type the following in order:</p>
+<p>1<br />
+2<br />
+3<br />
+4<br />
+n<br />
+p<br />
+1<br />
+8192<br />
+If you now execute:</p>
+<p>1<br />
+sudo fdisk -l<br />
+you will see your new partition (notice that it’s the name of the drive with “p1″ added to the end, this will be different on the non-arm devices….), but now we need to put a file system onto it..</p>
+<p>Execute the following command to install an ext4 filesystem:</p>
+<p>1<br />
+sudo mke2fs -t ext4 /dev/mmcblk1p1<br />
+Eject your card</p>
+<p>Re-insert it</p>
+<p>Done…. Your card now has a working ext4 filesystem and we’re ready to install crouton onto it..</p>
+<p>OK, at this point, you have a working SD Card</p>
+<p>OR if you’re installing internally, **this is where you join back in with the instructions***</p>
+<p>We’re back to the basics of crouton now…</p>
+<p>First, download the script (for the most up to date download, go here: https://github.com/dnschneid/crouton – at the top of the page, you will see a link like http://goo.gl……. I’m not posting it here as it changes regularly, and these instructions need to stay up to date…)</p>
+<p>Make sure before you download it that you delete any previous versions of the script that you might have (just in case you use an old one)..</p>
+<p>Back in a shell, once the script is downloaded, execute:</p>
+<p>FOR SD CARD PEOPLE::</p>
+<p>1<br />
+sudo sh -e ~/Downloads/crouton -t xfce -p /media/removable/External\ Drive<br />
+(careful with this location – if you’re familiar with linux use your “tab” key to complete the location, it’s easier and always accurate…)</p>
+<p>OR FOR INTERNAL DRIVE INSTALL::</p>
+<p>1<br />
+sudo sh -e ~/Downloads/crouton -t xfce<br />
+Wait for the process to complete..Answer any prompts (like your name, and password)</p>
+<p>Now, to launch into your new desktop, the commands are:</p>
+<p>FOR SD CARD USERS</p>
+<p>With SD card inserted, open a crosh window -&gt; ctrl+alt+t<br />
+Enter the shell by typing “shell”<br />
+Type</p>
+<p>1<br />
+2<br />
+cd /media/removable/External\ Drive/bin<br />
+sudo bash startxfce4 -c /media/removable/External\ Drive/chroots/<br />
+FOR INTERNAL INSTALLS</p>
+<p>1<br />
+sudo startxfce4<br />
+Then to switch between the two desktops, just use the following key combo:</p>
+<p>CTRL + ALT + SHIFT + “Back”</p>
+<p>Enjoy!!</p>
+<p>Written by craigerrington 12 Comments Posted in Uncategorized<br />
+January 17, 2013</p>
