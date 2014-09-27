@@ -4,6 +4,7 @@ description: Thoughts on development.
 
 handle_github: hkellaway
 handle_twitter: HarlanKellaway
+url_email_subscription: http://feeds.feedburner.com/hkellaway-dev
 
 highlighter: true
 permalink: /:year/:month/:day/:title

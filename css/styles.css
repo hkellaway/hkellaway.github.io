@@ -19,7 +19,7 @@ html {
 }
 
 .nav {
-  margin: 40px 0 0;
+  margin: 20px 0 0;
   padding: 0 0 0 48px;
   overflow: hidden;
   list-style: none;
@@ -155,7 +155,7 @@ video {
 }
 
 .icon {
-  width: 24px;
+  width: 30px;
   height: 24px;
   display: inline-block;
   vertical-align: middle;
@@ -185,6 +185,10 @@ video {
 
 .icon.github {
   background-image:url(/img/github.png);
+}
+
+.icon.email {
+  background-image:url(/img/email.png);
 }
 
 .nav a {
