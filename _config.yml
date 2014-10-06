@@ -4,12 +4,13 @@ description: Thoughts on development.
 
 handle_github: hkellaway
 handle_twitter: HarlanKellaway
+handle_disqus: hkellaway-dev
 url_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hkellaway-dev
 
 highlighter: true
-permalink: /:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 markdown: rdiscount
 exclude: ['.git']
-name: "Otter Pop"
+name: "Harlan Kellaway"
 description: Harlan Kellaway, developer
 url: http://hkellaway.github.o
