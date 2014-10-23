@@ -5,7 +5,7 @@ title: harlan kellaway | blog
 <div class="posts">
       {% for post in site.posts %}
           {% if post.hidden != true %}
-              {{ post.date }}
+              {{ post.date | date: "%m-%d-%Y" }}
               <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
           {% endif %}
       {% endfor %}
