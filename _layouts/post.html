@@ -33,9 +33,12 @@
     <!--<h1><marquee scrolldelay="60">{{ site.title }}</marquee></h1>-->
     <h1>harlan kellaway's blog // {{ page.title }}</h1>
 
-    <em>{{ page.date| date: "%m-%d-%Y" }}</em>
+    <div class="post-date">Published {{ page.date| date: "%m-%d-%Y" }}</div>
+
+    <br />
 
     <div class="post-body">
+
       {{ content }}
 
       <p>{% include shareaholic.html %}</p>

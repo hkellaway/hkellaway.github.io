@@ -8,3 +8,7 @@
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
 }
+
+.post-date {
+  font-size: 18px;  
+}

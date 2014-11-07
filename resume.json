@@ -1,0 +1,99 @@
+{
+  "basics": {
+    "name": "Harlan Kellaway",
+    "label": "Developer",
+    "picture": "http://harlankellaway.com/img/harlan.jpg",
+    "email": "hello@harlankellaway.com",
+    "website": "http://harlankellaway.com",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "hkellaway",
+        "url": "http://github.com/hkellaway"
+      },
+      {
+        "network": "Twitter",
+        "username": "@HarlanKellaway",
+        "url": "http://twitter.com/HarlanKellaway"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "hkellaway",
+        "url": "http://linkedin.com/in/hkellaway"
+      },
+      {
+        "network": "StackOverflow",
+        "username": "http://stackoverflow.com/u/3777116",
+        "url": "http://stackoverflow.com/u/3777116"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "MakeSchool",
+      "position": "Software Developer",
+      "website": "http://makeschool.com",
+      "startDate": "2014-09-15",
+      "endDate": "2015-08-15",
+      "summary": "The MakeSchool Gap Year is a 1 year college supplement that prepares students for a career as a founder or developer.",
+      "highlights": [
+        "First­batch student and dev at a year­long development program focused on application dev and applied CS",
+        "Will create original iOS and Ruby on Rails applications"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Wellesley College",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2006-09-01",
+      "endDate": "2010-06-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "iOS Development",
+      "keywords": [
+        "iOS",
+        "Objective-C",
+        "Xcode",
+        "Spritebuilder"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "keywords": [
+        "Git"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Social Justice",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "650­575­5196 // jeremy@makeschool.com",
+      "reference": "Jeremy Rossmann, Co-Founder of MakeSchool (formerly MakeGamesWithUs)"
+    }
+  ]
+}

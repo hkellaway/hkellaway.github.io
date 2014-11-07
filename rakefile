@@ -11,6 +11,13 @@ task :serve do
   system "open http://localhost:4000"
 end
 
+desc "Builds a fresh copy of your site, then opens it with drafts."
+task :drafts do
+  system "jekyll build"
+  system "jekyll serve --drafts"
+  system "open http://localhost:4000"
+end
+
 desc "Commits changes."
 # Usage: rake commit "Commit message."
 task :commit do
