@@ -48,6 +48,54 @@
         "First­batch student and dev at a year­long development program focused on application dev and applied CS",
         "Will create original iOS and Ruby on Rails applications"
       ]
+    },
+    {
+      "company": "MakeGamesWith.Us",
+      "position": "Game Development Intern (iOS)",
+      "website": "http://makegameswith.us",
+      "startDate": "2014-06-01",
+      "endDate": "2014-08-15",
+      "summary": "MakeGamesWith.Us teaches students to design, code and ship their own original iPhone games.",
+      "highlights": [
+        "Learned iOS technologies (Objective­C, Xcode) through building and shipping a original game to the App Store"
+      ]
+    },
+    {
+      "company": "MDRC",
+      "position": "Technical Analyst",
+      "website": "http://mdrc.org",
+      "startDate": "2011-10-15",
+      "endDate": "2014-05-15",
+      "summary": "MDRC is a non-profit devoted to research on issues facing low-income populations and solutions through social policy analysis and reform.",
+      "highlights": [
+        "Configuration & maintenance of business applications",
+        "Requirements analysis, communication & documentation",
+        "Custom programming for applications (C# console apps, JavaScript to customize web surveys, SQL statements)",
+        "Management of off­shore development projects",
+        "Training material on applications developed and presented regularly"
+      ]
+    },
+    {
+      "company": "Media Education Foundation",
+      "position": "Social Media Intern",
+      "website": "http://mediaed.org",
+      "startDate": "2011-06-15",
+      "endDate": "2011-08-15",
+      "summary": "The Media Education Foundation produces and distributes documentary films and other educational resources to inspire critical thinking about the social, political, and cultural impact of American mass media.",      
+      "highlights": [
+        "Maintenance of social media accounts (Twitter and Facebook) and customer service for a non­profit organization."
+      ]
+    },
+    {
+      "company": "Wellesley Centers for Women",
+      "position": "Assistant Web Manager",
+      "website": "http://wcwonline.org",
+      "startDate": "2007-05-15",
+      "endDate": "2010-05-15",
+      "summary": "The Wellesley Centers for Women is a gender-focused research-and-action non-profit.",
+      "highlights": [
+        "Website maintenance and enhancement using Joomla CMS, PHP, MySQL, JavaScript, HTML, and CSS."
+      ]
     }
   ],
   "education": [
@@ -84,7 +132,25 @@
   ],
   "interests": [
     {
+      "name": "Hackathons",
+      "keywords": [
+        ""
+      ]
+    },
+    {
       "name": "Social Justice",
+      "keywords": [
+        ""
+      ]
+    },
+    {
+      "name": "Social Media",
+      "keywords": [
+        ""
+      ]
+    },
+    {
+      "name": "Tech blogging",
       "keywords": [
         ""
       ]
@@ -92,8 +158,16 @@
   ],
   "references": [
     {
-      "name": "650­575­5196 // jeremy@makeschool.com",
+      "name": "650-575-5196 // jeremy@makeschool.com",
       "reference": "Jeremy Rossmann, Co-Founder of MakeSchool (formerly MakeGamesWithUs)"
+    },
+    {
+      "name": "212­532­3200 // ushapriya.narasimhan@mdrc.org",
+      "reference": "Ushapriya Narasimhan, CIO at MDRC"
+    },
+    {
+      "name": "781­283­2560 // ssours@wellesley.edu",
+      "reference": "Sue Sours, Information & Technology Systems Manager at Wellesley Centers for Women"
     }
   ]
 }
