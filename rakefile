@@ -35,7 +35,7 @@ task :ship do
   task message.to_sym do ; end
   system "jekyll build"
   system "cp _site/sitemap.xml ."
-  system "git add -all"
+  system "git add --all"
   system "git commit -am '#{message}'"
   system "git pull origin master"
   system "git push origin master"
