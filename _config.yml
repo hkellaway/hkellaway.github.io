@@ -1,7 +1,7 @@
 title: Harlan Kellaway is a cool developer
 short_title: harlankellaway.com
 url: http://harlankellaway.com
-description: Thoughts on development.
+description: Harlan Kellaway is a developer
 
 handle_github: hkellaway
 handle_twitter: HarlanKellaway
@@ -12,9 +12,6 @@ highlighter: true
 permalink: /blog/:year/:month/:day/:title
 markdown: rdiscount
 exclude: ['.git']
-name: "Harlan Kellaway"
-description: Harlan Kellaway, developer
-url: http://hkellaway.github.o
 
 gems:
   - jekyll-sitemap
