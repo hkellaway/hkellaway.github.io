@@ -10,8 +10,5 @@ url_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hkella
 
 highlighter: true
 permalink: /blog/:year/:month/:day/:title
-markdown: rdiscount
+markdown: kramdown
 exclude: ['.git']
-
-gems:
-  - jekyll-sitemap
