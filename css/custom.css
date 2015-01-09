@@ -13,7 +13,6 @@
   font-size: 18px;  
 }
 
-.project > a:link {
+.project {
   color: #FF00FF;
-  text-decoration: none;
 }
