@@ -1,0 +1,100 @@
+---
+layout: post
+title: Objective-C Design Patterns - An Example of the Factory Pattern
+date: 2015-01-10
+categories:
+- blog
+tags:
+- games
+- tech
+status: publish
+type: post
+---
+
+<p>As I was hacking away today and reading the wonderful code crafting manual, <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">Clean Code</a> by Robert C. Martin, I came across a snippet disparaging the use of the switch statement. As Martin says: "My general rule for <em>switch</em> statments is that they can be tolerated if they appear only once, are used to create polymorphic objects, and are hidden behind an inheritance relationship so that the rest of the system can't see them". Alongside, he includes an example of refactoring a switch statement into a Factory.</p>
+
+<p>I immediately thought of various situations in which I've relied too heavily on switch statments - which can become a growing problem with a growing code-base. I decided to refactor some recent code to use the Factory pattern in place of eventual switch statements or long if-elses down the line.</p>
+
+<p>The code I've written borrows heavily from a <a href="http://crosbymichael.com/objective-c-design-patterns-factory.html" target="_blank">post on Michael Crosby's blog</a>, however, I found I was confused until I implemented it myself. If you're looking into the Factory pattern, I'd encourage you to read that post first and study both his and my examples.</p>
+
+<p>The Factory pattern can come in handy when you have different types of the same object, especially if you don't know which variety of that object  you'll need until runtime. Here's an example from <em>Clean Code</em> translated from Java to Objective-C:</p>
+
+<blockquote>
+- (Money *)calculatePay(Employee *e) {<br />
+&nbsp;&nbsp;switch (e.type) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;case HOURLY:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return calculatedHourlyPay(e);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;case SALARIED:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return calculateSalariedPay(e);<br />
+&nbsp;&nbsp;}<br />
+}
+</blockquote>
+
+<p>We can imagine that other functions - e.g. <em>isPayday(Employee *e, NSDate *date)</em> - might have to adopt the same exact look. This will become a maintenance nightmare, especially when new <em>Employee</em> types are added.</p>
+
+<p>Enter the Factory pattern!</p>
+
+<p>We make a protocol for what is expected of <em>Employee</em>s:
+
+<blockquote>
+<em>// Employee.h</em><br />
+<br />
+@class Money;<br />
+<br />
+@protocol Employee <NSObject><br />
+<br />
+- (Money *)calculatePay;<br />
+<br />
+@end
+
+</blockquote>
+
+<p>We create our Factory class. This is the only place we'll need to import our individual class names - talk about <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY!</a></p>
+
+<blockquote>
+<em>// EmployeeFactory.h</em><br />
+#import "Employee.h"<br />
+<br />
+typedef NS_ENUM(NSInteger, EmployeeType)<br />
+{<br />
+&nbsp;&nbsp;Hourly,<br />
+&nbsp;&nbsp;Salaried<br />
+};<br />
+<br />
+@interface TagFactory : NSObject<br />
+<br />
++(id<Employee>) create:(EmployeeType)type;<br />
+<br />
+@end
+</blockquote>
+
+<blockquote>
+<em>// EmployeeFactory.m</em><br />
+#import "EmployeeFactory.h"<br />
+<br />
+#import "Employee.h"<br />
+#import "HourlyEmployee.h"<br />
+#import "SalariedEmployee.h"<br />
+<br />
+@implementation EmployeeFactory<br />
+<br />
++(id<Employee>) create:(EmployeeType)type {<br />
+&nbsp;&nbsp;switch (type) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;case Hourly:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [[HourlyEmployee alloc] init];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;case Salaried:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [[SalariedEmployee alloc]init];<br />
+&nbsp;&nbsp;}<br />
+}
+</blockquote>
+
+<p>Then go ahead and create your <em>HourlyEmployee</em> and <em>SalariedEmployee</em> classes with the required <em>calculatePay</em> method.</p>
+
+<p>Now, wherever you want to create an <em>Employee</em>, you can use the <em>create</em> method and <em>EmployeeType</em> to return the correct class.</p>
+
+<blockquote>
+id<Employee> employee = [TagFactory create:Hourly];<br />
+[employee calculatePay];
+</blockquote>
+
+<p>Happy coding!</p>
