@@ -88,7 +88,7 @@ typedef NS_ENUM(NSInteger, EmployeeType)<br />
 }
 </blockquote>
 
-<p>Then go ahead and create your <em>HourlyEmployee</em> and <em>SalariedEmployee</em> classes with the required <em>calculatePay</em> method.</p>
+<p>Then go ahead and create your <em>HourlyEmployee</em> and <em>SalariedEmployee</em> classes - make sure they invoke the &lt;Employee&gt; protocol in their headers and implement required <em>calculatePay</em> method.</p>
 
 <p>Now, wherever you want to create an <em>Employee</em>, you can use the <em>create</em> method and <em>EmployeeType</em> to return the correct class. The anonymous class <em>id</em> is used - as you may recall, this pattern is good for situations when you don't know the specific variety of the object you're creating until runtime (e.g. you're parsing JSON into objects of different types):</p> 
 
