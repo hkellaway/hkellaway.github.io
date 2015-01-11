@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, EmployeeType)<br />
 &nbsp;&nbsp;Salaried<br />
 };<br />
 <br />
-@interface TagFactory : NSObject<br />
+@interface EmployeeFactory : NSObject<br />
 <br />
 +(id<Employee>) create:(EmployeeType)type;<br />
 <br />
@@ -93,7 +93,7 @@ typedef NS_ENUM(NSInteger, EmployeeType)<br />
 <p>Now, wherever you want to create an <em>Employee</em>, you can use the <em>create</em> method and <em>EmployeeType</em> to return the correct class.</p>
 
 <blockquote>
-id<Employee> employee = [TagFactory create:Hourly];<br />
+id<Employee> employee = [EmployeeFactory create:Hourly];<br />
 [employee calculatePay];
 </blockquote>
 
