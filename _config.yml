@@ -6,7 +6,7 @@ description: Harlan Kellaway is a developer
 handle_github: hkellaway
 handle_twitter: HarlanKellaway
 handle_disqus: hkellaway-dev
-url_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hkellaway-dev
+url_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=harlan-kellaway-blog
 
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title
