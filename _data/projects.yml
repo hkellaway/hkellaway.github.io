@@ -1,0 +1,31 @@
+- id: refuge-restrooms
+  name: Refuge Restrooms
+  link: https://github.com/RefugeRestrooms/refuge-ios
+  description: an <strong>iOS app</strong> that helps map and locate safe/accessible restrooms for gender non-conforming and transgender people. Created for the Refuge Restrooms project <a href="http://www.refugerestrooms.org" target="_blank">refugerestrooms.org</a>
+  date_released: TBD
+  is_on_app_store: false
+  app_store_link:
+
+- id: get-piercing
+  name: Get Piercing!
+  link: /games/get-piercing.html
+  description: a ridiculous and gory infinite scroller <strong>game for iOS</strong> created with <a href="http://byjor.com" target="_blank">Jordan Arnesen</a> for the Cardinal Game Jam 2014
+  date_released: January 2015
+  is_on_app_store: true
+  app_store_link: http://bit.ly/getpiercing
+
+- id: mystartupisawesome
+  name: mystartupisaweso.me
+  link: http://challengepost.com/software/mystartupisaweso-me
+  description: Startup name generator created with <strong>Ruby on Rails</strong> for the Product Hunt Hackathon 2014
+  date_released: October 2014
+  is_on_app_store: false
+  app_store_link:
+
+- id: dhbox
+  name: DH Box
+  link: http://dhbox.org
+  description: a <strong>Jekyll-based website</strong> created for a graduate-level project on lowering the barrier to Digital Humanities academic tools
+  date_released: May 2014
+  is_on_app_store: false
+  app_store_link:
