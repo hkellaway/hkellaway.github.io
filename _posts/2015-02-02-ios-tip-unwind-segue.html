@@ -13,7 +13,7 @@ type: post
 
 <p>Unwind segues are a great way to get from one view controller down the stack back up to another. However, implementing them is not so straight forward - I always forget myself, so I thought I'd share it here.</p>
 
-<p>The key is to first add a method onto the view control from which you're segue-ing that takes in a <em>UIStoryboardSegue</em>. For example:</p>
+<p>The key is to first add a method onto the view control <em>to which</em> you're segue-ing that takes in a <em>UIStoryboardSegue</em>. For example:</p>
 
 <blockquote>
 @interface ViewController<br />
@@ -21,7 +21,7 @@ type: post
 @end
 </blockquote>
 
-<p>Afterwards, head to Storyboard and ctrl+drag from the yellow Home icon on the top of the view in question to its green Exit icon. This will create an unwind segue in Storyboard. Click that segue and give it an identifier.</p>
+<p>Afterwards, head to Storyboard and ctrl+drag from the yellow Home icon on the top of the view your <em>segueing from</em> to its green Exit icon. This will create an unwind segue in Storyboard. Click that segue and give it an identifier.</p>
 
 <p>To programmatically enact the segue - say when a button is touched, you can then call <em>[self performSegueWithIdenfifier:(NSString)unwindSegueIdentifier sender:self]</em> in the view controller where the unwind method was originally added.<p>
 
