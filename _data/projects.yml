@@ -24,7 +24,7 @@
 
 - id: dhbox
   name: DH Box
-  link: http://dhbox.org
+  link: http://harlan-kellaway-work.github.io/dhbox/
   description: a <strong>Jekyll-based website</strong> created for a graduate-level project on lowering the barrier to Digital Humanities academic tools
   date_released: May 2014
   is_on_app_store: false
