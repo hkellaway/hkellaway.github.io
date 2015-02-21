@@ -1,0 +1,54 @@
+---
+layout: post
+title: iOS How-To - Pre-loading Core Data on App Launch
+date: 2015-02-20
+categories:
+- blog
+tags:
+- tech
+- ios
+- objective-c
+status: publish
+type: post
+---
+
+<p>I am in the process of finishing up <a href="https://github.com/RefugeRestrooms/refuge-ios" target="_blank">an app</a> and just wrestled with the process of retrieving an sqlite db to include in the app to pre-populate Core Data on first download. There are many processes of how to get this done; I thought I'd share mine.</p>
+
+<h2>Step 1: Generate the sqlite DB</h2>
+
+<p>My app fetches JSON using <a href="https://github.com/AFNetworking/AFNetworking" target="_blank">AFNetworking</a> and translates the result into objects that are then saved to Core Data. Typically, my application only fetched up to 100 objects at a time - but my seed DB will have ~5700 objects. Given I had already built the functionality to read in JSON, translate, and save to Core Data, I chose to generate my sqlite DB by doing a special run of my application that pointed to a JSON file where all 5700 objects were listed.</p>
+
+<p>I did a run of my application using the iPhone Simulator, successfully retrieving, translating, and saving.</p>
+
+<h2>Step 2: Retrieve the sqlite DB</h2>
+
+<p>The sqlite file was output to the following file path:</p>
+
+<p><em>/Users/[USERNAME]/Library/Developer/CoreSimulator/Devices/[ID]/data/Containers/Data/Application/[ID]/Documents/[DATA MODEL NAME].sqlite</em></p>
+
+<p>where <em>[ID]</em> is the 32-character alphanumeric identifier of the latest run - this will be different each run.</p>
+
+<h2>Step 3: Verify data (optional)</h2>
+
+<p>I used the <a href="https://github.com/ChristianKienle/Core-Data-Editor" target="_blank">Core Data Editor</a> application to view my data and verify the expected amount of objects were created in my sqlite store. Core Data Editor also expects a .mom file (this tells it the structure of your data). I found this file at the following path:</p>
+
+<p><em>/Users/[USERNAME]/Library/Developer/CoreSimulator/Devices/[ID]/data/Containers/Bundle/Application/[ID]/[APP NAME].app/[DATA MODEL NAME].momd/[DATA MODEL NAME].mom</em></p>
+
+<h2>Step 4: Load data programmatically</h2>
+
+<p>I placed the following code in the `persistentStoreCoordinator` method of my `AppDelegate` AFTER the `storeURL` variable is declared:</p>
+
+<blockquote>
+if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]])<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp; NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:[SQLITE DB NAME] ofType:@"sqlite"]];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;NSError* error = nil;<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&error])<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSLog(@"Error");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</blockquote>
+
+Happy coding!
