@@ -2,9 +2,9 @@
   name: Refuge Restrooms
   link: https://github.com/RefugeRestrooms/refuge-ios
   description: an <strong>iOS app</strong> that helps map and locate safe/accessible restrooms for gender non-conforming and transgender people. Created for the Refuge Restrooms project <a href="http://www.refugerestrooms.org" target="_blank">refugerestrooms.org</a>
-  date_released: TBD
-  is_on_app_store: false
-  app_store_link:
+  date_released: March 2015
+  is_on_app_store: true
+  app_store_link: http://bit.ly/refuge-ios
 
 - id: get-piercing
   name: Get Piercing!
