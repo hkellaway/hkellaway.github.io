@@ -1,6 +1,6 @@
 - id: refuge-restrooms
   name: Refuge Restrooms
-  link: https://github.com/RefugeRestrooms/refuge-ios
+  link: /apps/refuge-restrooms
   description: an <strong>iOS app</strong> that helps map and locate safe/accessible restrooms for gender non-conforming and transgender people. Created for the Refuge Restrooms project <a href="http://www.refugerestrooms.org" target="_blank">refugerestrooms.org</a>
   date_released: March 2015
   is_on_app_store: true

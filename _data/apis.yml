@@ -1,0 +1,27 @@
+- id: public-stuff
+  name: Public Stuff
+  link: http://publicstuff.com
+  api-link: https://www.publicstuff.com/developers/api
+  description: White-label civic engagement app to increase community access to services
+  tags: civic hacking, community
+
+- id: refuge-restrooms
+  name: Refuge Restrooms
+  link: http://refugerestrooms.org
+  api-link: http://www.refugerestrooms.org/api/docs/
+  description: REFUGE is a web application that seeks to provide safe restroom access for transgender, intersex, and gender nonconforming individuals.
+  tags: transgender, gender, lgbtq
+
+- id: sunlight-foundation
+  name: Sunlight Foundation
+  link: http://sunlightfoundation.com
+  api-link: http://sunlightfoundation.com/api/
+  description: Making government accountable and transparent
+  tags: government
+
+- id: twilio-org
+  name: twilio.org
+  link: http://twilio.org
+  api-link: 
+  description: We believe nonprofits should have access to communications technologies that help make a real impact.
+  tags: communication, nonprofits
