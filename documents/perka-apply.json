@@ -1,0 +1,29 @@
+{
+    "first_name": "Harlan",
+    "last_name": "Kellaway",
+    "email": "harlan.kellaway@gmail.com", 
+     "position_id": "iOS_engineer",
+    "explanation": "",
+    "projects": [
+        {
+            "name": "Refuge Restrooms",
+            "description": "",
+            "url": "http://harlankellaway.com/apps/refuge-restrooms",
+            "demo": "http://bit.ly/refuge-ios"
+        },
+        {
+            "name": "Get Piercing!",
+            "description": "",
+            "url": "http: //harlankellaway.com/games/getpiercing",
+            "demo": "http: //bit.ly/getpiercing"
+        },
+        {
+            "name": "mystartupisaweso.me",
+            "description": "",
+            "url": "http: //challengepost.com/software/mystartupisaweso-me",
+            "demo": "http: //mystartupisaweso.me"
+        }
+    ],
+    "source": "friend",
+    "resume": "TBD"
+}
