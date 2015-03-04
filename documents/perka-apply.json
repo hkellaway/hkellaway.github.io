@@ -2,7 +2,7 @@
     "first_name": "Harlan",
     "last_name": "Kellaway",
     "email": "harlan.kellaway@gmail.com", 
-     "position_id": "iOS_engineer",
+    "position_id": "iOS_engineer",
     "explanation": "",
     "projects": [
         {
@@ -14,7 +14,7 @@
         {
             "name": "Get Piercing!",
             "description": "",
-            "url": "http: //harlankellaway.com/games/getpiercing",
+            "url": "http: //harlankellaway.com/games/get-piercing",
             "demo": "http: //bit.ly/getpiercing"
         },
         {
