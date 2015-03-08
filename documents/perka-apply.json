@@ -2,7 +2,11 @@
     "first_name": "Harlan",
     "last_name": "Kellaway",
     "email": "harlan.kellaway@gmail.com", 
-    "position_id": "iOS_engineer",
+    "position": [
+        {
+          "position_name": "iOS_engineer"
+        }
+    ],
     "explanation": "",
     "projects": [
         {
