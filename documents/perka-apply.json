@@ -6,22 +6,30 @@
     "explanation": "",
     "projects": [
         {
+            "name": "Github",
+            "description": "Github profile",
+            "url": "http://github.com/hkellaway",
+            "demo": "http://github.com/hkellaway"
+        },
+        {
+            "name": "LinkedIn",
+            "description": "LinkedIn profile",
+            "url": "http://linkedin.com/in/hkellaway"
+        },
+        {
             "name": "Refuge Restrooms",
             "description": "",
-            "url": "http://harlankellaway.com/apps/refuge-restrooms",
-            "demo": "http://bit.ly/refuge-ios"
+            "url": "http://harlankellaway.com/apps/refuge-restrooms"
         },
         {
             "name": "Get Piercing!",
             "description": "",
-            "url": "http: //harlankellaway.com/games/get-piercing",
-            "demo": "http: //bit.ly/getpiercing"
+            "url": "http: //harlankellaway.com/games/get-piercing"
         },
         {
             "name": "mystartupisaweso.me",
             "description": "",
             "url": "http: //challengepost.com/software/mystartupisaweso-me",
-            "demo": "http: //mystartupisaweso.me"
         }
     ],
     "source": "friend",
