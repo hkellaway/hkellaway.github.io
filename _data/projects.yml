@@ -5,6 +5,7 @@
   date_released: March 2015
   is_on_app_store: true
   app_store_link: http://bit.ly/refuge-ios
+  is_in_press: true
 
 - id: get-piercing
   name: Get Piercing!
@@ -13,6 +14,7 @@
   date_released: January 2015
   is_on_app_store: true
   app_store_link: http://bit.ly/getpiercing
+  is_in_press: false
 
 - id: mystartupisawesome
   name: mystartupisaweso.me
@@ -21,6 +23,7 @@
   date_released: October 2014
   is_on_app_store: false
   app_store_link:
+  is_in_press: false
 
 - id: dhbox
   name: DH Box
@@ -29,3 +32,4 @@
   date_released: May 2014
   is_on_app_store: false
   app_store_link:
+  is_in_press: false

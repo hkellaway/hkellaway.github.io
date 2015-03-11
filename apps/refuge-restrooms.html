@@ -1,4 +1,5 @@
 ---
+id: refuge-restrooms
 layout: default
 title: harlan kellaway | Refuge Restrooms - iOS App
 ---
@@ -19,7 +20,23 @@ title: harlan kellaway | Refuge Restrooms - iOS App
 
 <p>Access to safe restrooms is an important transgender rights issue - REFUGE seeks to aid this mission. Visit <a href="http://refugerestrooms.org" target="_blank">refugerestrooms.org</a> for more information.</p>
 
+<a name="support">
+
 <p>Having issues? Contact REFUGE at <a href="http://refugerestrooms.org/contact" target="_blank">refugerestrooms.com/contact</a>  or <a href="https://github.com/RefugeRestrooms/refugerestrooms/issues/new" target="_blank">submit an issue</a> on GitHub</p>
+
+<a name="press">
+
+<h3><span class="press">Press</span></h3>
+
+<ul>
+  {% for press in site.data.press %}
+    <li>
+      {% if press.id == page.id %}
+      <a href="{{ press.link }}" target="_blank">{{ press.title }}</a> (<em>{{ press.date }}</em>)
+      {% endif %}
+   </li>
+  {% endfor %}
+</ul>
 
 <p>
 
