@@ -7,6 +7,15 @@
   app_store_link: http://bit.ly/refuge-ios
   is_in_press: true
 
+- id: cocoapod-hnkwordlookup
+  name: HNKWordLookup   
+  link: http://cocoapods.org/pods/HNKWordLookup
+  description: a <strong>Cocoapod</strong> that performs standard English-language dictionary queries, such as definitions, pronunciations, random words, and Word of the Day.
+  date_released: March 2015
+  is_on_app_store: false
+  app_store_link:                         
+  is_in_press: false
+
 - id: get-piercing
   name: Get Piercing!
   link: /games/get-piercing.html
