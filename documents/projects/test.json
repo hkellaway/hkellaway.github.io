@@ -1,0 +1,24 @@
+{
+    "first_name": "Harlan",
+    "last_name": "Kellaway",
+    "email": "hello@harlankellaway.com",
+    "title": "iOS Developer",
+    "social_profiles": [
+        {
+            "name": "GitHub",
+            "url": "http://github.com/hkellaway"
+        },
+        {
+            "name": "Stackoverflow",
+            "url": "http://stackoverflow.com/users/3777116/harlan-kellaway"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "http://linkedin.com/in/hkellaway"
+        },
+        {
+            "name": "Blog",
+            "url": "http://harlankellaway.com/blog"
+        }
+    ]
+}
