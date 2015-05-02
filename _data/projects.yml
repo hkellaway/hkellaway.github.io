@@ -3,7 +3,7 @@
   type: cocoapod
   link: http://cocoapods.org/pods/HNKGooglePlacesAutocomplete
   description: a <strong>Cocoapod</strong> that acts as a wrapper for the Google Places Autocomplete API
-  date_released: April 2015
+  date_released: May 2015
   is_on_app_store: false
   app_store_link:
   is_in_press: false
