@@ -1,3 +1,14 @@
-<script type="text/javascript">
-  window.location = "/"
-</script>
+---
+layout: default
+title: harlan kellaway | blog
+---
+<div class="posts">
+      {% for post in site.posts %}
+          {% if post.hidden != true %}
+              <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+          {% endif %}
+      {% endfor %}
+</div>
+
+{% include license-blog.html %}
+{% include mixpanel-badge.html %}

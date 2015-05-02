@@ -1,14 +1,68 @@
 ---
 layout: default
-title: harlan kellaway | blog
+title: harlan kellaway | projects
 ---
-<div class="posts">
-      {% for post in site.posts %}
-          {% if post.hidden != true %}
-              <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
-          {% endif %}
-      {% endfor %}
-</div>
 
-{% include license-blog.html %}
-{% include mixpanel-badge.html %}
+<p>Most of my current work is  mobile development for iOS. What I work toward personally is using my background in tech and gender studies to promote social justice for the gender non-conforming community.</p>
+
+<p>App Store releases: <a href="https://itunes.apple.com/us/artist/harlan-kellaway/id951392292" target="_blank">https://itunes.apple.com/us/artist/harlan-kellaway/id951392292</a></p>
+
+<h2>Projects</h2>
+
+<a name="apps">
+<h3>Apps</h3>
+
+<ul>
+  {% for project in site.data.projects %}
+    {% if project.type == "ios-app"  %}
+    <li>
+      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}
+</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
+      {% if project.is_on_app_store %}
+        <br />
+        {% include app-store-badge-{{ project.id }}.html  %}
+      {% endif %}
+   </li>
+  {% endif  %}
+  {% endfor %}
+</ul>
+
+<a name="cocoapods">
+<h3>Cocoapods</h3>
+
+<ul>
+  {% for project in site.data.projects %}
+    {% if project.type == "cocoapod"  %}
+    <li>
+      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
+      {% if project.is_on_app_store %}
+        <br />
+        {% include app-store-badge-{{ project.id }}.html  %}
+      {% endif %}
+   </li>
+  {% endif  %}
+  {% endfor %}
+</ul>
+
+<a name="web">
+<h3>Web</h3>
+
+<ul>
+  {% for project in site.data.projects %}
+    {% if project.type == "web"  %}
+    <li>
+      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
+      {% if project.is_on_app_store %}
+        <br />
+        {% include app-store-badge-{{ project.id }}.html  %}
+      {% endif %}
+   </li>
+  {% endif  %}
+  {% endfor %}
+</ul>
+
+<br />
+
+<p>You can <a href="/documents/kellaway-resume.pdf">download my resume</a> if you'd like.
+
+<p>And you can reach me at <a href="mailto:hello@harlankellaway.com?subject=hello from your website!">hello [at] harlankellaway [dot] com</a>.</p>
