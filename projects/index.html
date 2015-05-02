@@ -9,8 +9,28 @@ title: harlan kellaway | projects
 
 <h2>Projects</h2>
 
+<h3>Apps</h3>
+
 <ul>
   {% for project in site.data.projects %}
+    {% if project.type == "ios-app"  %}
+    <li>
+      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}
+</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
+      {% if project.is_on_app_store %}
+        <br />
+        {% include app-store-badge-{{ project.id }}.html  %}
+      {% endif %}
+   </li>
+  {% endif  %}
+  {% endfor %}
+</ul>
+
+<h3>Cocoapods</h3>
+
+<ul>
+  {% for project in site.data.projects %}
+    {% if project.type == "cocoapod"  %}
     <li>
       <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
       {% if project.is_on_app_store %}
@@ -18,6 +38,23 @@ title: harlan kellaway | projects
         {% include app-store-badge-{{ project.id }}.html  %}
       {% endif %}
    </li>
+  {% endif  %}
+  {% endfor %}
+</ul>
+
+<h3>Web</h3>
+
+<ul>
+  {% for project in site.data.projects %}
+    {% if project.type == "web"  %}
+    <li>
+      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
+      {% if project.is_on_app_store %}
+        <br />
+        {% include app-store-badge-{{ project.id }}.html  %}
+      {% endif %}
+   </li>
+  {% endif  %}
   {% endfor %}
 </ul>
 
