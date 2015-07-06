@@ -2,7 +2,7 @@
   name: Swift JSON Parsing by Example
   type: blog-post
   link: /blog/2015/07/05/swift-json-library-comparison/
-  description: <strong>Sample code and write-up</strong> that explore various Swift libraries for parsing JSON into objects
+  description: <strong>Sample code and write-up</strong> that explores various Swift libraries for parsing JSON into objects
   date_released: July 2015
   is_on_app_store: false
   app_store_link:
