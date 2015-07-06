@@ -1,3 +1,14 @@
+- id: swift-json-comparison
+  name: Swift JSON Parsing by Example
+  type: blog-post
+  link: /blog/2015/07/05/swift-json-library-comparison/
+  description: <strong>Sample code and write-up</strong> that explore various Swift libraries for parsing JSON into objects
+  date_released: July 2015
+  is_on_app_store: false
+  app_store_link:
+  is_in_press: false
+  is_swift: true
+
 - id: cocoapod-hnkgoogleplacesautocomplete
   name: HNKGooglePlacesAutocomplete
   type: cocoapod
@@ -7,6 +18,7 @@
   is_on_app_store: false
   app_store_link:
   is_in_press: false
+  is_swift: false
 
 - id: cocoapod-hnkserverfacade
   name: HNKServerFacade
@@ -17,6 +29,7 @@
   is_on_app_store: false
   app_store_link:
   is_in_press: false
+  is_swift: false
 
 - id: refuge-restrooms
   name: Refuge Restrooms
@@ -27,6 +40,7 @@
   is_on_app_store: true
   app_store_link: http://bit.ly/refuge-ios
   is_in_press: true
+  is_swift: false
 
 - id: cocoapod-hnkwordlookup
   name: HNKWordLookup   
@@ -37,6 +51,7 @@
   is_on_app_store: false
   app_store_link:                         
   is_in_press: false
+  is_swift: false
 
 - id: get-piercing
   name: Get Piercing!
@@ -47,6 +62,7 @@
   is_on_app_store: true
   app_store_link: http://bit.ly/getpiercing
   is_in_press: false
+  is_swift: false
 
 - id: mystartupisawesome
   name: mystartupisaweso.me
@@ -57,6 +73,7 @@
   is_on_app_store: false
   app_store_link:
   is_in_press: false
+  is_swift: false
 
 - id: dhbox
   name: DH Box
@@ -67,3 +84,4 @@
   is_on_app_store: false
   app_store_link:
   is_in_press: false
+  is_swift: false
