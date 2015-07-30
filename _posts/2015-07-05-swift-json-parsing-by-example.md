@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swift JSON parsing by example - ft. Argo, JSONJoy, ObjectMapper, and SwiftyJSON
+title: Swift JSON Parsing by Example - ft. Argo, JSONJoy, ObjectMapper, and SwiftyJSON
 date: 2015-07-05 
 categories:
 - blog
