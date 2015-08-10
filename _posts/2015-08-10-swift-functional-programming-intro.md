@@ -80,15 +80,15 @@ For Swift 1.2, functions like *map* and *reduce* were global functions in Swift'
 
 <blockquote>A functional version [of imperative code] would be declarative. It would describe what to do, rather than how to do it...A program can be made more declarative by bundling pieces of the code into functions.</blockquote>
 
-Objective-C programmers are used to writing imperatively - this is a programming paradigm where sequences are statements are used to modify state. Functional programming is a form of declarative programming - which is characterized by using functions to describe what to do.
+Objective-C programmers are used to writing imperatively - this is a programming paradigm where sequences of statements are used to modify state. Functional programming is a form of declarative programming - which is characterized by using functions to describe what to do.
 
-## Example #6 - Declarative 1
+## Example #6 - Imperative 1
 
 Let's look at Cook's example of a small program that will simulate a race between three cars:
 
 <script src="https://gist.github.com/hkellaway/66b33e33e0d97ca8fe4c.js"></script>
 
-## Example #7 - Declarative 2
+## Example #7 - Imperative 2
 
 A practiced Objective-C programmer might look at this and realize it'd be better expressed by breaking it into smaller pieces:
 
@@ -96,7 +96,7 @@ A practiced Objective-C programmer might look at this and realize it'd be better
 
 This is cleaner code, but it is still not functional - each function does not do what Cook teaches us to expect with a functional impelemtnation: "[functions don't] rely on data outside the current function, and [don't] change data that exists outside the current function".
 
-## Example #8 - Functional
+## Example #8 - Declarative
 
 Here's the functional version:
 
