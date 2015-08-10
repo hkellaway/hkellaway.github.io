@@ -11,7 +11,7 @@ title: harlan kellaway | projects
 
 <a name="apps">
 
-<h3><em>Apps</h3>
+<h3><em>Apps</em></h3>
 
 <ul>
   {% for project in site.data.projects %}
@@ -28,25 +28,8 @@ title: harlan kellaway | projects
   {% endfor %}
 </ul>
 
-<a name="cocoapods">
-<h3>Cocoapods</h3>
-
-<ul>
-  {% for project in site.data.projects %}
-    {% if project.type == "cocoapod"  %}
-    <li>
-      <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
-      {% if project.is_on_app_store %}
-        <br />
-        {% include app-store-badge-{{ project.id }}.html  %}
-      {% endif %}
-   </li>
-  {% endif  %}
-  {% endfor %}
-</ul>
-
 <a name="swift">
-<h3>Swift <span class="icon swift"></span></h3>
+<h3><em>Swift</em> <span class="icon swift"></span></h3>
 
 <ul>
   {% for project in site.data.projects %}
@@ -62,12 +45,12 @@ title: harlan kellaway | projects
   {% endfor %}
 </ul>
 
-<a name="web">
-<h3>Web</h3>
+<a name="cocoapods">
+<h3><em>Cocoapods</em></h3>
 
 <ul>
   {% for project in site.data.projects %}
-    {% if project.type == "web"  %}
+    {% if project.type == "cocoapod"  %}
     <li>
       <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
       {% if project.is_on_app_store %}
@@ -79,6 +62,6 @@ title: harlan kellaway | projects
   {% endfor %}
 </ul>
 
-<br />
+<br /><br />
 
 {% include mixpanel-badge.html %}

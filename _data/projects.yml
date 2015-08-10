@@ -1,3 +1,14 @@
+- id: swift-functional-intro
+  name: A practical introduction to functional programming - now with Swift!
+  type: blog-post
+  link: /blog/2015/08/10/swift-functional-programming-intro/
+  description: <strong>Sample code and write-up</strong> that explores introductory functional programming concepts in Swift. Inspired by Mary Rose Cook's "A practical introduction to functional programming"
+  date_released: August 2015
+  is_on_app_store: false
+  app_store_link:
+  is_in_press: false
+  is_swift: true
+
 - id: swift-json-comparison
   name: Swift JSON Parsing by Example
   type: blog-post
@@ -61,27 +72,5 @@
   date_released: January 2015
   is_on_app_store: true
   app_store_link: http://bit.ly/getpiercing
-  is_in_press: false
-  is_swift: false
-
-- id: mystartupisawesome
-  name: mystartupisaweso.me
-  type: web
-  link: http://challengepost.com/software/mystartupisaweso-me
-  description: Startup name generator created with <strong>Ruby on Rails</strong> for the Product Hunt Hackathon 2014
-  date_released: October 2014
-  is_on_app_store: false
-  app_store_link:
-  is_in_press: false
-  is_swift: false
-
-- id: dhbox
-  name: DH Box
-  type: web
-  link: http://harlan-kellaway-work.github.io/dhbox/
-  description: a <strong>Jekyll-based website</strong> created for a graduate-level project on lowering the barrier to Digital Humanities academic tools
-  date_released: May 2014
-  is_on_app_store: false
-  app_store_link:
   is_in_press: false
   is_swift: false
