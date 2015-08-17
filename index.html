@@ -33,7 +33,7 @@ title: harlan kellaway | projects
 
 <ul>
   {% for project in site.data.projects %}
-    {% if project.is_swift  %}
+    {% if project.is_swift and project.show_under_swift  %}
     <li>
       <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
       {% if project.is_on_app_store %}

@@ -1,3 +1,28 @@
+
+- id: cocoapod-gloss
+  name: Gloss
+  type: cocoapod
+  link: http://cocoapods.org/pods/Gloss
+  description: A Shiny JSON Parsing Library in Swift
+  date_released: August 2015
+  is_on_app_store: false
+  app_store_link:
+  is_in_press: false
+  is_swift: true
+  show_under_swift: false
+
+- id: gloss-intro
+  name: Introducing Gloss - A Shiny JSON Parsing Library in Swift
+  type: blog-post
+  link: /blog/2015/08/16/introducing-gloss-json-parsing-swift/
+  description: A <strong>Cocoapod</strong> that allows simple JSON parsing to and from objects
+  date_released: August 2015
+  is_on_app_store: false
+  app_store_link:
+  is_in_press: false
+  is_swift: true
+  show_under_swift: true
+
 - id: swift-functional-intro
   name: A practical introduction to functional programming - now with Swift!
   type: blog-post
@@ -8,6 +33,7 @@
   app_store_link:
   is_in_press: false
   is_swift: true
+  show_under_swift: true
 
 - id: swift-json-comparison
   name: Swift JSON Parsing by Example
@@ -19,6 +45,7 @@
   app_store_link:
   is_in_press: false
   is_swift: true
+  show_under_swift: true
 
 - id: cocoapod-hnkgoogleplacesautocomplete
   name: HNKGooglePlacesAutocomplete
@@ -30,6 +57,7 @@
   app_store_link:
   is_in_press: false
   is_swift: false
+  show_under_swift: false
 
 - id: cocoapod-hnkserverfacade
   name: HNKServerFacade
@@ -41,6 +69,7 @@
   app_store_link:
   is_in_press: false
   is_swift: false
+  show_under_swift: false
 
 - id: refuge-restrooms
   name: Refuge Restrooms
@@ -52,6 +81,7 @@
   app_store_link: http://bit.ly/refuge-ios
   is_in_press: true
   is_swift: false
+  show_under_swift: false
 
 - id: cocoapod-hnkwordlookup
   name: HNKWordLookup   
@@ -63,6 +93,7 @@
   app_store_link:                         
   is_in_press: false
   is_swift: false
+  show_under_swift: false
 
 - id: get-piercing
   name: Get Piercing!
@@ -74,3 +105,4 @@
   app_store_link: http://bit.ly/getpiercing
   is_in_press: false
   is_swift: false
+  show_under_swift: false
