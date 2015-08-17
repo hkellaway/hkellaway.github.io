@@ -30,6 +30,8 @@ The libraries I'll be exploring are:
 
 Examples will demonstrate how each library handles: simple model creation, JSON to model translation, transforming values during translation, and translating nested models. These examples are not exhaustive of what each library is capable of.
 
+[I'd be remiss if I didn't mention that, since first publishing this post, I was inspired to write my own JSON parsing library, [Gloss](https://github.com/hkellaway/Gloss). Read more about that [here](/blog/2015/08/16/introducing-gloss-json-parsing-swift).]
+
 ## JSON
 
 JSON will be retrieved from the Github API using [Alamofire](https://github.com/Alamofire/Alamofire) for networking. The JSON retrieved is the representation of the repo for this demo: [https://api.github.com/repos/hkellaway/swift-json-comparison](https://api.github.com/repos/hkellaway/swift-json-comparison)
@@ -269,3 +271,9 @@ Each of the libraries presented here takes a different approach to how models sh
 While this post didn't delve into theorization on which might be better than the other, I certainly hope it helps when it comes time to evaluate such libraries for your next project. Again, you can check out the code seen in this post in action here: [https://github.com/hkellaway/swift-json-comparison](https://github.com/hkellaway/swift-json-comparison)
 
 Happy coding!
+
+<br />
+
+-------------
+
+EDIT: Content added 08/16/2015 mentioning my own JSON parsing library, [Gloss](https://github.com/hkellaway/Gloss)
