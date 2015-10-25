@@ -1,8 +1,7 @@
-
 - id: cocoapod-gloss
   name: Gloss
   type: cocoapod
-  link: http://cocoapods.org/pods/Gloss
+  link: http://harlankellaway.com/Gloss/
   description: A Shiny JSON Parsing Library in Swift
   date_released: August 2015
   is_on_app_store: false
