@@ -14,7 +14,7 @@
   name: Introducing Gloss - A Shiny JSON Parsing Library in Swift
   type: blog-post
   link: /blog/2015/08/16/introducing-gloss-json-parsing-swift/
-  description: A <strong>Cocoapod</strong> that allows simple JSON parsing to and from objects
+  description: A Swift <strong>library</strong> that allows simple JSON parsing to and from objects
   date_released: August 2015
   is_on_app_store: false
   app_store_link:
