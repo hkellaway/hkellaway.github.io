@@ -46,15 +46,15 @@ A simplified version of the JSON we're using would look as such:
 
 You can explore the code in this post yourself by heading over to: [https://github.com/hkellaway/swift-json-comparison](https://github.com/hkellaway/swift-json-comparison)
 
-Code for this project was written with Swift 1.2.
-
 This project uses Cocoapods as a dependency manager with the following pods and versions:
 
-* pod 'Alamofire', '1.2.3'
-* pod 'Argo', '1.0.3'
-* pod 'JSONJoy-Swift', '0.9.2'
-* pod 'ObjectMapper', '0.12'
-* pod 'SwiftyJSON', '2.2.0'
+* pod 'Alamofire', '3.1.2'
+* pod 'Argo', '2.2.0' (and Runes 3.1.0)
+* pod 'JSONJoy-Swift', '1.0.0'
+* pod 'ObjectMapper', '1.0.1'
+* pod 'SwiftyJSON', '2.3.1'
+
+[Note: Pod versions were updated since first being pusblished to make the examples Swift 2.0 compatible - thanks [@dearprakash](https://github.com/hkellaway/swift-json-comparison/pull/10)]!
 
 <a id="argo">
 
@@ -277,3 +277,5 @@ Happy coding!
 -------------
 
 EDIT: Content added 08/16/2015 mentioning my own JSON parsing library, [Gloss](https://github.com/hkellaway/Gloss)
+<br />
+EDIT: Content added 11/21/2015 to mention example project being updated to Swift 2.0 (thanks [@dearprakash](https://github.com/hkellaway/swift-json-comparison/pull/10))!
