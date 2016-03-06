@@ -58,18 +58,6 @@
   is_swift: false
   show_under_swift: false
 
-- id: cocoapod-hnkserverfacade
-  name: HNKServerFacade
-  type: cocoapod
-  link: http://cocoapods.org/pods/HNKServerFacade
-  description: a <strong>Cocoapod</strong> that acts as a simple server interface, inspired by <a href="http://supermar.in/isolating-network-inside-your-app/" target="_blank">http://supermar.in/isolating-network-inside-your-app/</a>
-  date_released: April 2015
-  is_on_app_store: false
-  app_store_link:
-  is_in_press: false
-  is_swift: false
-  show_under_swift: false
-
 - id: refuge-restrooms
   name: Refuge Restrooms
   type: ios-app
@@ -90,18 +78,6 @@
   date_released: March 2015
   is_on_app_store: false
   app_store_link:                         
-  is_in_press: false
-  is_swift: false
-  show_under_swift: false
-
-- id: get-piercing
-  name: Get Piercing!
-  type: ios-app
-  link: /games/get-piercing.html
-  description: a ridiculous and gory infinite scroller <strong>game for iOS</strong> created with <a href="http://byjor.com" target="_blank">Jordan Arnesen</a> for the Cardinal Game Jam 2014
-  date_released: January 2015
-  is_on_app_store: true
-  app_store_link: http://bit.ly/getpiercing
   is_in_press: false
   is_swift: false
   show_under_swift: false
