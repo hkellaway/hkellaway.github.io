@@ -8,7 +8,7 @@ handle_twitter: HarlanKellaway
 handle_disqus: hkellaway-dev
 url_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=harlan-kellaway-blog
 
-highlighter: pygments
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
 exclude: ['.git']
