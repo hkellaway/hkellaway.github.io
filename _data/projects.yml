@@ -1,7 +1,7 @@
 - id: cocoapod-gloss
   name: Gloss
   type: cocoapod
-  link: http://harlankellaway.com/Gloss/
+  link: http://harlankellaway.com/Gloss
   description: A Shiny JSON Parsing Library in Swift
   date_released: August 2015
   is_on_app_store: false
@@ -25,7 +25,7 @@
 - id: swift-functional-intro
   name: A practical introduction to functional programming - now with Swift!
   type: blog-post
-  link: /blog/2015/08/10/swift-functional-programming-intro/
+  link: /blog/2015/08/10/swift-functional-programming-intro
   description: <strong>Sample code and write-up</strong> that explores introductory functional programming concepts in Swift. Inspired by Mary Rose Cook's "A practical introduction to functional programming"
   date_released: August 2015
   is_on_app_store: false
@@ -37,7 +37,7 @@
 - id: swift-json-comparison
   name: Swift JSON Parsing by Example
   type: blog-post
-  link: /blog/2015/07/05/swift-json-parsing-by-example/
+  link: /blog/2015/07/05/swift-json-parsing-by-example
   description: <strong>Sample code and write-up</strong> that explores various Swift libraries for parsing JSON into objects
   date_released: July 2015
   is_on_app_store: false
