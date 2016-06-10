@@ -1,0 +1,145 @@
+---
+layout: post
+title: Themes in Modern iOS Architectures
+date: 2016-06-10
+categories:
+- blog
+tags:
+- tech
+- ios
+- development
+- software-architecture
+status: publish
+type: post
+published: true
+---
+
+<h1>Introduction</h1>
+
+<a href="http://blog.prolificinteractive.com/2016/06/10/themes-in-modern-ios-architectures/" target="_blank">Cross-posted from the Prolific Interactive blog</a>
+
+<p>It seems I can't go to an iOS meetup or conference without hearing that architectural epithet, "Massive View Controller". It's an easy joke to make with long-suffering implementers of the MVC pattern. Massive View Controller is a play on the acronym MVC, or <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" target="_blank">Model View Controller</a> - the recommended architectural pattern prescribed by Apple. Massive represents the product of attempting to follow traditional MVC, but winding up with all code that is clearly not a Model or a View dumped into View Controllers. This would be code that does any number of things - making network requests, translating models into UI attributes, interacting with persistent storage, and more.</p>
+
+<p>What's great is that the community has become increasingly aware that MVC doesn't cut it in a lot of cases, especially as applications scale. As a result, more and more architectural patterns have been springing up and gaining momentum over the last 3 years. I'm talking <a href="https://www.objc.io/issues/13-architecture/mvvm/" target="_blank">MVVM</a>, I'm talking <a href="http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/" target="_blank">VIPER</a>. I'm talking even newer arrivals at the party, <a href="https://github.com/ReSwift/ReSwift" target="_blank">ReSwift</a> and <a href="https://corner.squareup.com/2015/12/ziggurat-ios-app-architecture.html" target="_blank">Ziggurat</a>.</p>
+
+<p>Thankfully, <a href="#resources">resources</a> to explore how to implement these patterns have sprung up increasingly as well. Instead of giving another tutorial, as many pieces do so well, I'd like to explore some of the themes these patterns broach repeatedly. The point of understanding these themes, is that we can make strides towards improving existing code - be it Massive - even if we don't adopt these patterns in their entirety.</p>
+
+<h2>Break Up Massive View Controller</h2>
+
+<p>This one goes almost without saying. Each architectural pattern has been made to break up the duties that would generally fall within a Massive View Controller. We can see a reflection of this in their key actors:</p>
+
+<ul>
+	<li>MVVM: View/ViewController - ViewModel - Model</li>
+
+	<li>VIPER: View - Presenter - Interactor - Entity - Router</li>
+
+	<li>ReSwift: View - Actions - Store - Reducers</li>
+
+	<li>Ziggurat: View - Service - Renderer - Presenter - ViewModel</li>
+
+</ul>
+
+
+<p>What's important to notice about these actors is that their responsibilities are clearly defined.</p>
+
+<p>Another way to think about this is through the lens of the <a href="https://blog.8thlight.com/elizabeth-engelman/2015/01/22/single-responsibility-principle-why-does-it-matter.html" target="_blank">Single Responsibility Principle</a>. This principle states that software entities should have one-and-only-one responsibility. A downfall of the MVC architecture is that the Controller's responsibility is too loosely defined - which, in practice, leads to it having (way) more than one responsibility.</p>
+
+<h2>Create Dumber View Controllers</h2>
+
+<p>Views should be dumb. This means that Views should not have logic that pertains to anything but UI.</p>
+
+<h3>Think of View Controllers as the View</h3>
+
+<p>I think this theme is visually summed up best by the typical MVVM diagram that shows the View and View Controller placed explicitly together as one entity: </p>
+
+<a href="https://www.objc.io/issues/13-architecture/mvvm/"><img src="http://blog.prolificinteractive.com/wp-content/uploads/mvvm-b27768df.png" alt="mvvm-b27768df" width="484" height="94" class="aligncenter size-full wp-image-8322" /></a>
+<span style="font-size: 8px">Source: <a href="https://www.objc.io/issues/13-architecture/mvvm/" alt="MVVM Diagram">https://www.objc.io/issues/13-architecture/mvvm/</a></span>
+
+<p>VIPER espouses the same - View Controllers comprise the V in VIPER, as demonstrated by the originators' code examples. The underlying observation being that Views and View Controllers are too tightly entwined in Cocoa to conceptualize them as separate.</p>
+
+<p>What to do? Introduce other actors that handle the logic of retrieving Models and others that handle parsing Model data into what's needed of the View. If your View is doing something not UI related: introduce another actor.</p>
+
+<h3>Don't Empower Views to Do Anything but UI Work</h3>
+
+<p>There's a related idea nestled in there - that Views shouldn't even be exposed to things that allow them to do anything but their UI work. This may mean not passing them Model objects - but rather simple data objects tailored to have only the data that that View needs.</p>
+
+<p>That last point is rather illuminating when you're used to seeing code like this any given day:</p>
+
+<blockquote><pre>
+class MyViewController: UIViewController, UITableViewDataSource {
+	
+	var models: [MyModel]?
+
+	// ...
+
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCellWithIdentifier("MyTableViewCell") as! MyTableViewCell
+            let model = self.models[indexPath.row]
+        
+            cell.layoutWithModel(model)
+        
+            return cell
+    }
+
+}
+</pre></blockquote>
+
+<blockquote><pre>
+struct MyModel {
+	
+	let name: String
+	let sensitiveBusinessProperty: Int
+	// ...
+
+	func importantBusinessFunction() {
+		//...
+	}
+
+}
+</pre></blockquote>
+
+<p>In this example, the cell is handed the Model directly in order to lay itself out. The danger here comes in that the View has access to data, and potentially functions, that have nothing to do with it; the temptation becomes to update Model values directly or call functions on that Model, which affect other areas of the application in unknown ways. If logic is spread out like this repeatedly, understanding how data and how the Views that rely on it get updated becomes increasingly difficult, and eventually impossible.</p>
+
+<h2>Reduce Shared Data</h2>
+
+<p>Which leads us to our next theme - reducing shared data. Shared data is the source of innumerable bugs and developer expletives -- it's no surprise that these architectural patterns emphasize honing in on the flow of data and on objects whose responsibility it is to modify data.</p>
+
+<p>You'll see with ReSwift or Ziggruat the term One-Way Data Flow (or Unidirectional Data Flow). What each pattern illustrates is a chain of actors that are only allowed to receive data in one way and pass it along in another. In action, a view will receive input, pass data along to another object, which parses out from the data what should be passed to another object, and so forth - until a new object representing the View's state is created and the View is made to use it and update.</p>
+
+<p>What this all points away from is our typical assortment of semi-random objects - View Controllers, table cells, utilities - that share and modify the same object.</p>
+
+<h3>Immutable Data Objects</h3>
+
+<p>What you'll see a lot in examples of these architectures being used is immutable data objects being passed to and from objects. This is by design -- and it's even in the design of Swift! Swift itself has an emphasis on `struct`s, as well as clear callouts of what properties and functions modify data (think of the `var` and `mutating` keywords). The idea is to be very aware where data can be modified - and to favor using immutable objects to transfer data.</p>
+
+
+<h2>Look to Other Programming Communities for Good Architectural Patterns</h2>
+
+<p>ALL of these patterns take cue from patterns created by other programming communities. MVVM originated in the .NET (Microsoft!) community and shares its concept with the Presentation Model pattern described by Java extraordinaire <a href="http://www.martinfowler.com/" target="_blank">Martin Fowler</a>. VIPER is an adaptation of <a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html" target="_blank">The Clean Architecture</a> by the multi-disciplined <a href="http://cleancoder.com" target="_blank">Robert C. Martin</a>. ReSwift and Ziggurat are adapted from the JavaScript framework <a href="https://github.com/rackt/redux" target="_blank">Redux</a>, which was adapted from Facebook's <a href="https://facebook.github.io/flux/" target="_blank">Flux</a> framework.</p>
+
+<p>We need to look to other communities -- be it .NET, Java, web languages, multi-disciplined developers -- who have been solving the problems we have for longer. We have to keep searching for what it is to write good code and write good applications. Simply because a trusted resource like Apple recommends a solution doesn't mean it's the best or the best in all cases.</p>
+
+<h2 id="resources">And That's Not All</h2>
+
+<p>Working towards any or all of these themes will produce code that has less tangible benefits: code will be easier to debug, have better organization, be quicker for newer developers to comprehend, and of course, be easier to test. With that, I urge you to explore some of these themes in your existing codebase and to keep them at hand when you embark on your next project.</p>
+
+<h4>Resources</h4>
+
+<p>Good reads on architectural patterns:</p>
+
+<ul>
+	<li><a href="https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52#.e2d178dst" target="_blank">iOS Architecture Patterns: Demystifying MVC, MVP, MVVM and VIPER</a></li>
+	<li>
+<a href="http://artsy.github.io/blog/2015/09/24/mvvm-in-swift/" target="_blank">MVVM In Swift</a></li>
+
+	<li><a href="http://khanlou.com/2015/12/mvvm-is-not-very-good/" target="_blank">MVVM is Not Very Good</a></li>
+
+	<li><a href="https://ashfurrow.com/blog/mvvm-is-exceptionally-ok/" target="_blank">MVVM is Exceptionally OK</a></li>
+
+	<li><a href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f" target="_blank">Brigade's Experience Using an MVC Alternative</a></li>
+
+	<li><a href="http://mttnow.com/architecting-mobile-apps-with-bviper-modules-2/" target="_blank">Architecting Apps with (B)VIPER</a></li>
+
+	<li><a href="https://realm.io/news/andy-matuschak-controlling-complexity/" target="_blank">Controlling Complexity in Swift</a></li>
+
+</ul>
