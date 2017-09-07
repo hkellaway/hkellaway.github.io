@@ -14,7 +14,7 @@ published: true
 
 Cross-posted from the [Prolific Interactive Blog](https://www.prolificinteractive.com/2017/09/06/writing-imperfect-code/)
 
-Young in our development* careers, we’re often told that code should be [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). That we *absolutely must remove duplication. It feels dire sometimes: if duplication in a codebase exists, that code ought be burned at the stake. Maybe us along with it? It can feel like a parent saying “do as I say, not as I do,” or “you’ll understand one day.”
+Young in our development careers, we’re often told that code should be [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). That we *absolutely must* remove duplication. It feels dire sometimes: if duplication in a codebase exists, that code ought be burned at the stake. Maybe us along with it? It can feel like a parent saying “do as I say, not as I do,” or “you’ll understand one day.”
 
 It is actually great advice. It comes from any tome on good programming practice by the masters in our field: [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code) by Robert Martin, [The Pragmatic Programmer](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer) by Hunt & Thomas, [Implementation Patterns](https://www.goodreads.com/book/show/781559.Implementation_Patterns) by Kent Beck, etc. Developers like Martin and Beck have been in the game for decades, and these books are attempts to crystallize their immeasurable knowledge in a way that is accessible– for the new developer all the way through the next generation of master.
 
