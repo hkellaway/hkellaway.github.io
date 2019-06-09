@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solid Principles in Swift
+title: Video Talk - "Solid Principles in Swift"
 date: 2016-06-24
 categories:
 - blog
