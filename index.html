@@ -54,7 +54,7 @@ title: harlan kellaway | projects
     <li>
       <a href="{{ project.link }}" target="_blank"><span class="project">{{ project.name }}</span></a> - {{ project.description }} (<em>Released {{ project.date_released }}</em>) {% if project.is_in_press %} <span class="press"><a href="{{ project.link }}#press">Press</a></span>  {% endif %}
       {% if project.stars_link %}
-      <a href="project.link" target="_blank"><img src="{{ project.stars_link }}</img></a>
+      <a href="{{ project.link }}" target="_blank"><img src="{{ project.stars_link }}</img></a>
       {% endif %}
       {% if project.is_on_app_store %}
         <br />
