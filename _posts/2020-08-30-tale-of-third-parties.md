@@ -38,7 +38,7 @@ Once I set my sights on doing this, I realized that I didn't know how to "do" it
 
 I very often fiddle in code when the outline of a solution is there but the details are still primordial goop. And, this case was no different. I asked myself: *if I was a user of Gloss trying to move to `Codable` piecemeal, what splint might I write in between the two?* With some fiddling later, a path forward was lit.
 
-I made the decision to first release a backwards-compatible version of the library that includes helper methods safe to place in current implementations. These helpers aid the migrator in uncovering where their `Codable` definitions would go awry. Indeed, that's exactly what I've done in my own workplace code while migrating to `Codable`. Given its a tactic I've proved out on real-world applications at scale, it's something I feel good suggesting.
+I made the decision to first release a backwards-compatible version of the library that includes helper methods safe to place in current implementations. These helpers aid the migrator in uncovering where their `Codable` definitions would go awry. Indeed, that's exactly what I've done in my own workplace code while migrating to `Codable`. Given it's a tactic I've proved out on real-world applications at scale, it's something I feel good suggesting.
 
 What helped immensely is that I had a [Demo project](https://github.com/hkellaway/Gloss/tree/production/GlossExample) waiting that uses Gloss, as well as a [suite of tests](https://github.com/hkellaway/Gloss/tree/production/Sources/GlossTests) verifying its functionality. I was able to work out many kinks in my splint by migrating my Demo project and I feel much more confident my work is backwards-compatible with my tests all green. 
 
@@ -56,7 +56,7 @@ With Code and Guide ready, the last piece was to figure out how to get it all ou
 
 Early on I determined that part of the point was to keep new developers from picking up `Gloss` instead of `Codable`. So, the first place to deter them is the `README`. I'll be honest, it was hard to take down a README that I worked on for over 5 years, but it's the right thing to do. I kept a [backup of the former README](https://github.com/hkellaway/Gloss/blob/production/README_ARCHIVE.md) for reference, but the [new README](https://github.com/hkellaway/Gloss/blob/production/README.md) serves one purpose: a stop sign with only directions on how to start migrating.
 
-A couple other good leverage points to keep folks from picking up Gloss or attempting feature development are at Issues and Pull Reuqests. So a new [Issue Template](https://github.com/hkellaway/Gloss/blob/production/ISSUE_TEMPLATE.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) were in order.
+A couple other good leverage points to keep folks from picking up Gloss or attempting feature development are at Issues and Pull Requests. So a new [Issue Template](https://github.com/hkellaway/Gloss/blob/production/ISSUE_TEMPLATE.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) were in order.
 
 Lastly, I'm a big fan of writing down those things that exist [between](/blog/2017/09/06/writing-imperfect-code) the [technical](/blog/2016/06/10/themes-in-modern-ios-architectures) and [non-technical](/blog/2019/06/07/swiftui-will-change-more-than-how-we-code). It becomes a reference for myself if I ever need to think about something similar again, and hopefully proves useful to others. So I chose to write a blog post as part of this rollout.
 
@@ -72,11 +72,11 @@ What follows is a little reference of just the steps I took toward getting my li
 
 * If you have a release in progress, finish up that release and ship it: that'll be your last release on anything that doesn't involve migration (example: [Gloss 3.1.1](https://github.com/hkellaway/Gloss/releases/tag/3.1.1))
 * Write a backwards-compatible splint that helps migrators try out the destination framework without harming their current integration (example: [PR/363](https://github.com/hkellaway/Gloss/pull/363))
-* Test your splint with realistic usage! Hopefully you have tests (and a Demo project) for your library and can confirm the splint doesn't affect expected behavior or make for a nightmareish integration
+* Test your splint with realistic usage! Hopefully you have tests (and a Demo project) for your library and can confirm the splint doesn't affect expected behavior or make for a nightmarish integration
 * Prepare a [Migration Guide](https://github.com/hkellaway/Gloss/blob/production/GLOSS_CODABLE_MIGRATION_GUIDE.md) once the shape of the splint is down
 * Release a specific version of the library only containing that splint. Given it's backwards-compatible, this should be a [minor release](https://semver.org/). You can now think of your library as before-migration and after-migration. New changes are made only to support migration; only changes compatible with that version are accepted; users on lower versions with version-specific fixes must be gently turned down and urged to upgrade (example: [Gloss 3.2.0](https://github.com/hkellaway/Gloss/releases/tag/3.2.0))
 * Move your current README to an archive of that README for reference only (example: [Gloss/README_ARCHIVE.md](https://github.com/hkellaway/Gloss/blob/production/README_ARCHIVE.md))
-* Create a new README specifying that the library is *Deprecated* and the succeeding library should be used in place of yours. Be sure to thank everyone whose used and contributed your library to date! (example: [Gloss/README.md](https://github.com/hkellaway/Gloss/blob/production/README.md))
+* Create a new README specifying that the library is *Deprecated* and the succeeding library should be used in place of yours. Be sure to thank everyone who's used and contributed your library to date! (example: [Gloss/README.md](https://github.com/hkellaway/Gloss/blob/production/README.md))
 * Change the description of the repo to clearly indicate it's *Deprecated*
 * Update your [Issue Template](https://github.com/hkellaway/Gloss/blob/production/ISSUE_TEMPLATE.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) to push people towards migrating
 * Write a blog post :)
