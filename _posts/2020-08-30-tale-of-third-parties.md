@@ -56,7 +56,7 @@ With Code and Guide ready, the last piece was to figure out how to get it all ou
 
 Early on I determined that part of the point was to keep new developers from picking up `Gloss` instead of `Codable`. So, the first place to deter them is the `README`. I'll be honest, it was hard to take down a README that I worked on for over 5 years, but it's the right thing to do. I kept a [backup of the former README](https://github.com/hkellaway/Gloss/blob/production/README_ARCHIVE.md) for reference, but the [new README](https://github.com/hkellaway/Gloss/blob/production/README.md) serves one purpose: a stop sign with only directions on how to start migrating.
 
-A couple other good leverage points to keep folks from picking up Gloss or attempting feature development are at Issues and Pull Requests. So a new [Issue Template](https://github.com/hkellaway/Gloss/blob/production/ISSUE_TEMPLATE.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) were in order.
+A couple other good leverage points to keep folks from picking up Gloss or attempting feature development are at Issues and Pull Requests. So a new [Issue Template](https://github.com/hkellaway/Gloss/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) were in order.
 
 Lastly, I'm a big fan of writing down those things that exist [between](/blog/2017/09/06/writing-imperfect-code) the [technical](/blog/2016/06/10/themes-in-modern-ios-architectures) and [non-technical](/blog/2019/06/07/swiftui-will-change-more-than-how-we-code). It becomes a reference for myself if I ever need to think about something similar again, and hopefully proves useful to others. So I chose to write a blog post as part of this rollout.
 
@@ -78,7 +78,7 @@ What follows is a little reference of just the steps I took toward getting my li
 * Move your current README to an archive of that README for reference only (example: [Gloss/README_ARCHIVE.md](https://github.com/hkellaway/Gloss/blob/production/README_ARCHIVE.md))
 * Create a new README specifying that the library is *Deprecated* and the succeeding library should be used in place of yours. Be sure to thank everyone who's used and contributed to your library to date! (example: [Gloss/README.md](https://github.com/hkellaway/Gloss/blob/production/README.md))
 * Change the description of the repo to clearly indicate it's *Deprecated*
-* Update your [Issue Template](https://github.com/hkellaway/Gloss/blob/production/ISSUE_TEMPLATE.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) to push people towards migrating
+* Update your [Issue Template](https://github.com/hkellaway/Gloss/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) and [Pull Request Template](https://github.com/hkellaway/Gloss/blob/production/PULL_REQUEST_TEMPLATE.md) to push people towards migrating
 * Write a blog post :)
 
 After an amount of time has passed addressing migration issues, it's time to officially deprecate. At that point you can:
